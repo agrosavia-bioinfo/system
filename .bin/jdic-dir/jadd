@@ -1,0 +1,4 @@
+cat ~/.bin/JDic/words.txt > ~/.bin/JDic/b
+read words
+echo $words > ~/.bin/JDic/words.txt
+cat ~/.bin/JDic/b >> ~/.bin/JDic/words.txt

@@ -1,0 +1,2 @@
+rm /a
+ln -s $PWD /a

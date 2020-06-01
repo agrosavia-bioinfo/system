@@ -1,0 +1,3 @@
+sudo iwconfig wlp2s0 mode Master
+sudo iwconfig wlp2s0 essid Tomato24 
+sudo iwconfig wlp2s0 key restricted 00000000

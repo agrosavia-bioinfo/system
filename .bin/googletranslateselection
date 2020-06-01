@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+text="$(xsel -o)"
+#x-www-browser "https://translate.google.com/#auto/pt/$text"
+konqueror "https://translate.google.com/#auto/es/$text"

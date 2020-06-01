@@ -1,0 +1,2 @@
+ps -ef|grep power > b
+killlg b

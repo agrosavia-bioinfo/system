@@ -1,0 +1,2 @@
+xterm -fn 6x13 -bg rgb:00/22/37 -fg cyan -e axel $1 
+exit

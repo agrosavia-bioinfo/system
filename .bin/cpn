@@ -1,0 +1,2 @@
+scp $1 lgarreta@nilson:/tmp
+

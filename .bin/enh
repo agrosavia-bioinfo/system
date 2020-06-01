@@ -1,0 +1,10 @@
+#LANG=en_US.ISO8859-1 
+#ssh -p 2224 -X lg@bioinfo.univalle.edu.co
+#ssh -XC -c blowfish-cbc,arcfour lg@bioinfo.univalle.edu.co -p 2224
+
+#ssh -YC -c arcfour lgarreta@bioinfo.univalle.edu.co -p 2245 
+#ssh -C  lgarreta@bioinfo.univalle.edu.co -p 2243 
+
+#ssh -C -o CompressionLevel=9  lgarreta@bioinfo.univalle.edu.co -p 2243
+xt enh
+ssh -C -c blowfish-cbc,arcfour lgarreta@eisc.univalle.edu.co -p 2243

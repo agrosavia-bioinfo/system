@@ -1,0 +1,2 @@
+
+xbacklight -set 80

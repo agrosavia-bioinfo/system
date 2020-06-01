@@ -1,0 +1,3 @@
+#xed $1 &
+#rasmol $1 &
+#lg-pymol.py $1 > /dev/null &

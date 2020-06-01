@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/'
+let g:netrw_dirhist_2='/home/lg/cloud/iot/Dropbox/dev/ceaiot/ndevs-to-onestring'
+let g:netrw_dirhist_3='/dev/shm'
+let g:netrw_dirhist_4='/home/lg/agrosavia/projects/gwas-polypilene/dev/out'

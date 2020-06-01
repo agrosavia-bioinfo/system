@@ -1,0 +1,3 @@
+# One page in a block. All pages. Scale at 1.1. Shift the page in x,y by -4 and -5cm resp.
+
+lgbpstops '1:0@1.1(-4cm,-5.5cm)' rohl.ps rohl2.ps;ps2pdf rohl2.ps;pdf rohl2.pdf

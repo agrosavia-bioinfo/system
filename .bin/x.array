@@ -1,0 +1,35 @@
+#!/bin/bash
+
+title=$1
+if [ "$1" == '' ]; then
+	echo 
+	title="XTERM"
+fi
+
+ARRCOLOR=(red blue yellow) 
+
+let "NUMBER%= 3"
+
+BG=black
+mcho $NUMBER >> /tmp/a
+if [ $NUMBER -eq 0 ]; then
+	xterm -bg red
+	BG=red
+else
+	if [ $NUMBER -eq 1 ]; then
+		xterm -bg blue
+		BG=blue
+	else
+		xterm -bg green
+		BG=green
+	fi
+	
+fi
+
+#BG=${ARRCOLOR[$NUMBER]}
+echo $BG
+echo $NUMBER
+
+#xterm -fn 8x16 -bg $BG -fg cyan -n $title -ls &
+
+#xterm -fn 8x16 -bg rgb:00/02/17 -fg cyan -n $title -ls &

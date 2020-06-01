@@ -1,0 +1,3 @@
+cmm="mplayer $1 -sub $2 -ass -ass-color ffff0000"
+echo $cmm
+exec $cmm

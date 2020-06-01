@@ -1,0 +1,2 @@
+
+ffmpeg -i N3085.AVI -ab 56k -ar 22050 -b 300k -r 15 -s 480x360 DSCN3085.flv

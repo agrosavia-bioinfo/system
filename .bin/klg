@@ -1,0 +1,50 @@
+#!/usr/bin/python
+# Shows a list of processing (accordint to an input pattern) and
+# propmts if they'll be killle
+
+import sys, os
+args = sys.argv
+
+tmpDir = os.getenv ("HOME")+"/tmp/b"
+
+patter = ""
+option = ""
+
+if len (args) == 3:
+	option = args[2]
+
+cpid = os.getpid()
+
+cmm2 = "pslg " + sys.argv [1] + " > " + tmpDir
+os.system (cmm2)
+
+# get times to show only old processes (not script processes)
+import time as tm
+hour = tm.localtime().tm_hour
+mins = tm.localtime().tm_min
+ctime = "%s:%s" % (hour, mins)
+
+pidList = []
+for process in open(tmpDir):
+	pid = int (process.split()[1])
+	ptime = process.split()[4]
+        cValue = sum (map(int, ctime.split(":")), 0)
+        pValue = sum (map(int, ptime.split(":")), 0)
+        print (cValue, pValue)
+        print ptime.split(":")
+        if (pValue < cValue):
+		print ">>>", process.strip()
+		pidList.append (pid)
+
+if option == "-auto":
+	response = "y"
+else:
+	response = raw_input ("kill all of them ?")
+
+if response != "y":
+	sys.exit (0)
+
+for pid in pidList:
+	cmd = "kill -9 " + str(pid)
+	os.system (cmd)
+

@@ -1,0 +1,5 @@
+command="cdrecord -v -dev=/dev/scd0 -eject speed=48 $1"
+
+echo $command
+
+eval $command

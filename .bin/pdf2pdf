@@ -1,0 +1,5 @@
+name=`echo $1|cut -d'.' -f1`
+cp $1 $name-org.pdf
+pdf2ps -dLanguageLevel=1 $name.pdf
+ps2pdf $name.ps
+

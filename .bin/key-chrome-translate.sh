@@ -1,0 +1,1 @@
+/home/lg/.bin/keys/key-chrome-translate.sh

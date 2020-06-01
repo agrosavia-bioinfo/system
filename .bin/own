@@ -1,0 +1,3 @@
+cmm="chown -R lg:lg $1"
+echo $cmm
+sudo $cmm

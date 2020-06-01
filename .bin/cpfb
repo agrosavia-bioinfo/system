@@ -1,0 +1,2 @@
+HOME=/home/lgarreta/cloud/proteinpaths/01-Reduction/dev
+scp -P 2245 lgarreta@bioinfo.univalle.edu.co:$HOME/$1 .

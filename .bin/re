@@ -1,0 +1,4 @@
+fdisk -l
+read T
+echo ">>"
+echo $T

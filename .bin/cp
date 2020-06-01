@@ -1,0 +1,3 @@
+$TOUCH="AlpsPS/2 ALPS GlidePoint"
+xinput set-prop $TOUCH "Synaptics Noise Cancellation" 20 20
+xinput set-prop $TOUCH "Synaptics Finger" 50 90 255

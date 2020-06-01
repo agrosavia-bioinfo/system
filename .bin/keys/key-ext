@@ -1,0 +1,1 @@
+xmodmap -e "keycode 94 = Alt_L ISO_Prev_Group Alt_L ISO_Prev_Group"

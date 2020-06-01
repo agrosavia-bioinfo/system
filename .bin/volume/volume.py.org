@@ -1,0 +1,10 @@
+#!/usr/bin/python
+
+# Change volume --see alsamixer--
+
+import os, sys
+
+vol = int (sys.argv[1])
+pcm  = int (255*vol/9) 
+
+os.system ("amixer set PCM " + str(pcm))

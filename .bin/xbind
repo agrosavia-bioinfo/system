@@ -1,0 +1,19 @@
+#!/bin/bash
+# Start stop the xbindkeys using the rc file .xbindkeysrc.rc
+
+path=/home/lg/tmp/config/xbind.cfg
+if [ -a $path ]; then
+	x=`cat $path`
+	if [ $x = "1" ]; then
+		`echo 0 > $path` 
+		killall xbindkeys
+	else 
+    	 xbindkeys -f /home/lg/.xbindkeysrc.rc
+		`echo 1 > $path`
+	fi
+else
+	`echo 1 > $path` 
+fi
+cat ~/tmp/config/xbind.cfg
+	
+		

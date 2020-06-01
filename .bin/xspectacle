@@ -1,0 +1,1 @@
+spectacle -br -o /tmp/copyshot.png -n && xclip -sel clip -t image/png /tmp/copyshot.png

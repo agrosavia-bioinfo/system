@@ -1,0 +1,2 @@
+scp $1 lg@bimac:/tmp/ 
+

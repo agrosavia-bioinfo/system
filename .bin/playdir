@@ -1,0 +1,4 @@
+find *|grep ogg > tmp.list
+find *|grep mp3 >> tmp.list
+sort -R tmp.list > tmpran.list
+xterm -title `basename $PWD` -e 'playlist tmpran.list' &

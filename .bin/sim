@@ -1,0 +1,11 @@
+LANG=en_US.ISO8859-1 
+#ssh -p 2224 -X lg@bioinfo.univalle.edu.co
+#ssh -t -XC -p 2224 -c blowfish-cbc,arcfour lg@bioinfo.univalle.edu.co  /home/lg/.bin/enh
+ssh -t -XC -p 2224 -c blowfish-cbc,arcfour lg@bioinfo.univalle.edu.co  
+
+#if [ `hostname`=='bioinfo' ]; then
+#	ssh -YC -c arcfour lg@eisc.univalle.edu.co -p 2224 -o ProxyCommand="corkscrew proxy.unicauca.edu.co 3128 %h %p"
+#else
+#	ssh -YC -c arcfour lg@eisc.univalle.edu.co -p 2224 
+#fi
+

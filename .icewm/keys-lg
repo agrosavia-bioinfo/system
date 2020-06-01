@@ -1,0 +1,135 @@
+# This is an example for IceWM's hotkey definition file.
+#
+# Place your variants in /etc/X11/icewm or in $HOME/.icewm
+# since modifications to this file will be discarded when you
+# (re)install icewm.
+#
+# A list of all valid keyboard symbols can be found in
+# /usr/include/X11/keysym.h, keysymdefs.h, XF86keysym.h, ...
+# You'll have to omit XK_ prefixs and to replace XF86XK_ prefixes by
+# XF86. Valid modifiers are Alt, Ctrl, Shift, Meta, Super and Hyper.
+#
+#
+######## +h ############################
+key "Ctrl+Alt+h"    xed /home/lg/.ssh/known_hosts
+
+######## +d ############################
+key "Ctrl+Alt+i"	xed /home/lg/.bin/img
+key "Ctrl+Alt+d"    xed /home/lg/tmp/dropbox-home.txt
+#key "Ctrl+Alt+d"			dillo 
+key "Ctrl+Alt+o"			okular /home/lg/others/books/Confidence-LG.pdf
+key "Alt+d"        dillo
+#key "Alt+d"				stardict
+
+key "Ctrl+Alt+p"	xed /home/lg/cloud/phd/Dropbox/phd/thesis/tex/chapter-7-groups/chapter-groups.tex
+#key "Ctrl+Alt+p"		xpaper
+#key "Ctrl+Alt+p"		gnome-cups-manager
+#key "Alt+p"			xP  # Conflict with lyx layout hot key
+
+######## +w ############################
+key "Alt+w"				firefox
+#key "Ctrl+Alt+w"			wmctrl-set.py	
+key "Ctrl+Alt+w"	wmctrl-set.py 0.5
+
+######## +a ############################
+#key "Alt+a"				chromium-browser
+#key "Alt+a"					google-chrome --proxy-server:192.168.1.64:3128
+#key "Ctrl+Alt+a"	gnome-pie
+#key "Ctrl+Shift+a"			wmctrl -a chapter-properties.tex
+#key "Alt+a"			xjadd   # Terminal to add words to jdic puzle
+#key "Alt+a"		chromium-browser --user-data-dir=/home/lg
+
+
+######## +m ############################
+key "Alt+m"			/home/lg/.bin/midnight-up.py
+#key "Alt+m"			wmctrl -a mc
+key "Ctrl+m"		xmc
+
+
+key "Ctrl+Alt+b"	xed /home/lg/cloud/phd/Dropbox/phd/thesis/papers/b.tex
+#key "Ctrl+Alt+b"	xbright
+key "Alt+k"		kpaint
+#key "Alt+k"		/home/lg/.bin/lg-kill-cur.sh
+#key "Alt+b"			xbook
+key "Alt+b"			xbio
+key "Alt+Ctrl+f"	xed /home/lg/.vim/lgColors/lgfog.vim
+key "Alt+c"			lg-mouse-restart.sh
+key "XF86Standby"	xtouch-enable	
+key "Alt+Ctrl+c"	feh /home/lg/.vim/vim-colors.png
+key "Ctrl+k"		killlatex
+#key "F1"			ltx current
+key "Ctrl+Alt+y"			xed /home/lg/phd/thesis/tex/adds/lgstyle.sty
+key "Ctrl+Alt+e"	        xed /home/lg/.mc/mc.ext.lg.old
+key "Ctrl+Alt+Shift+v"		xvimhelp.sh
+key "Ctrl+Alt+v"			xed /home/lg/.vimrc
+#key "Alt+r"			refs
+key "Alt+r"			xR
+#key "Alt+t"			x TEST
+key "Alt+x"			x "X"
+#key "Alt+x"			x geofold
+key "Alt+y"			y "X"
+key "Alt+e"			bbrun -w
+
+key "Alt+s"			gnome-sound-applet
+key "Ctr+Alt+r"		xR
+#key "F1"			xtouch-enable
+key "Ctrl+Alt+z"				xsuspend # screenshog for GenezillaVM
+#key "Alt+s"				xshot # screenshog for GenezillaVM
+key "Ctrl.Alt+l"			xhot 
+key "Alt+g"				goldendict
+key "Ctrl+Alt+g"			 gpointing-device-settings
+key "XF86AudioLowerVolume"	vol -
+key "XF86AudioRaiseVolume"	vol +
+key "Ctrl+Alt+n"	vol -
+key "Ctrl+Alt+m"	vol +
+key "Alt+l"				xleft
+key "Alt+n"				xnormal
+#key "Alt+Ctrl+r"				xright
+#key "Ctrl+Alt+m"		xed /home/lg/.icewm/menu
+#key "Ctrl+Alt+m"		xed /home/lg/.icewm/menu
+key "Ctrl+Alt+x"		xsel -o
+
+key "Alt+z"		ksnapshot   
+#key "Alt+z"			wmctrl -a chapter-6-components.tex
+#key "Print"		gnome-screenshot -a -i
+
+key "Ctrl+Alt+j"	jabref
+key "Alt+u"			xed /home/lg/tmp/modified.txt
+key "CTrl+Alt+u"	uusb  # UnMount USB memory
+key "Alt+j"			jdic   	# Puzle to learn english words
+
+key "Ctrl+Alt+k"		xkeys
+key "Ctrl+Alt+s"		sudo synaptic
+#key "Alt+s"			xsources
+key "Ctrl+Alt+o"				ooffice
+
+
+key "Alt+Ctrl+t"		xed /home/lg/papers/tutorials
+#key "Alt+Ctrl+n"		netscape -noraise -remote openBrowser
+#key "Alt+Ctrl+b"		netscape -noraise -remote openBookmarks
+#key "Alt+Ctrl+m"		netscape -noraise -remote openURL(mailto:,new-window) 
+#key "Alt+Ctrl+n"		sensible-browser
+#key "Alt+Ctrl+b"		mozilla -noraise -remote openBookmarks
+#key "Alt+Ctrl+m"		mozilla-thunderbird mailto:
+
+key "Alt+Ctrl+KP_Divide"	aumix -v -5		# lower volume
+key "Alt+Ctrl+KP_Multiply"	aumix -v +5		# raise volume
+
+# "Multimedia key" bindings for XFree86. Gather the keycodes of your
+# advanced function keys by watching the output of the xev command whilest
+# pressing those keys and map those symbols by using xmodmap.
+
+#key "XF86Standby"		killall -QUIT icewm
+#key "XF86AudioLowerVolume"	aumix -v -5
+#key "XF86AudioRaiseVolume"	aumix -v +5
+key "XF86AudioMute"		aumix -v 0
+key "XF86AudioPlay"		cdplay play 1
+key "XF86AudioStop"		cdplay stop
+#key "XF86HomePage"		netscape -noraise -remote openHomepage
+#key "XF86Mail"			netscape -noraise -remote openURL(mailto:,new-window) 
+#key "XF86Search"		netscape -noraise -remote openURL(http://www.google.com/)
+key "XF86HomePage"		sensible-browser
+key "XF86Mail"			mozilla-thunderbird mailto:
+key "XF86Search"		sensible-browser http://www.google.com/
+key "XF86Eject"			eject
+

@@ -1,0 +1,16 @@
+#\bin\bash
+# Program to compile temporal chapters
+# Get arguments from command line or get the name of the active window
+
+p=`echo $1|cut -d. -f 1`
+
+echo ">>>>>>>>>>>>>> " $p
+
+echo ">>>" "pdflatex $p.tex" 
+pdflatex -halt-on-error $p.tex  
+#echo ">>>" "bibtex $p.aux"
+#bibtex $p.aux; 
+#echo ">>>" "pdflatex $p.aux;"
+#pdflatex -halt-on-error $p.tex  
+#pdflatex -halt-on-error $p.tex  
+#cleanltx

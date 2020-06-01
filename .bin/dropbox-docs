@@ -1,0 +1,4 @@
+#!/bin/bash
+#garretaluis@yahoo.com
+
+HOME=/home/lg/cloud/docs /usr/bin/dropbox-org start 

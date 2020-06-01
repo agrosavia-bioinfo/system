@@ -1,0 +1,242 @@
+# This is an example for IceWM's menu definition file.
+#
+# Place your variants in /etc/X11/icewm or in $HOME/.icewm
+# since modifications to this file will be discarded when you
+# (re)install icewm.
+#
+
+prog mendeley mendeleydesktop refs
+prog gnome-pomodoro gnome-pomodoro gnome-pomodoro
+prog lyx lyx lyx 
+prog google-chrome google-chrome google-chrome 
+separator
+menu "lg" folder {
+
+	menu "Scholar" folder {
+		prog jabref jabref jabref
+		prog dia dia dia
+	}
+	menu "Players" folder {
+		menu "Radio" folder {
+			prog streamtuner2 streamtuner2 streamtuner2
+		}
+		prog audacious audacious audacious
+		prog vlc vlc vlc
+		prog totem totem totem
+		prog gnome-mplayer gnome-mplayer gnome-mplayer
+		prog rhythmbox rhythmbox rhythmbox
+		prog avidemux avidemux avidemux
+		prog kaffeine kaffeine kaffeine
+		prog kmplayer kmplayer kmplayer
+		prog amarok amarok amarok
+		prog Exaile exaile exaile
+		prog gxine gxine gxine
+		prog gmplayer gmplayer
+		prog xmms xmms xmms
+		prog "MP3 encode" lame lame
+		prog "rip + encode" grip grip
+		prog "open movie editor" openmovieeditor openmovieeditor
+	}
+
+	menu "Internet" folder {
+		prog skype skype skype
+		prog gpodder gpodder gpodder 
+		separator
+		prog firefox firefox firefox
+		prog google-chrome google-chrome google-chrome
+		prog arora arora arora
+		prog netsurf netsurf netsurf
+	}
+
+	menu "Readers&Viewers" folder {
+		prog acroread	acroread acroread
+		prog okular	okular okular
+		prog mupdf	mupdf mupdf
+		prog FoxitReader	FoxitReader FoxitReader
+		separator
+		prog "Eye Of Gnome"	eog eog
+		prog "Dia -- Diagrams"	dia dia
+	}
+	menu "Graphics" folder {
+		prog "Eye Of Gnome"	eog eog
+		prog "Dia -- Diagrams"	dia dia
+		prog "Pinta -- paint" pinta pinta
+	}
+	menu "Desktop" folder {
+		prog xpad	xpad xpad
+		prog gnote	gnote gnote
+	}
+
+	menu "others" folder {
+			prog "Umbrello" /usr/share/pixmaps/umbrello.xpm umbrello
+			prog "Amule" /usr/share/pixmaps/amule.xpm amule
+			prog "KsnapShot" /usr/share/pixmaps/ksnapshot.xpm ksnapshot
+			prog "gvim" /usr/share/pixmaps/ksnapshot.xpm ksnapshot
+			prog "Lyx (Latex)"	lyx	lyx
+			prog "JabRef"	/opt/jabref/jabref.png java -jar /opt/jabref/jabref
+			prog "Open Office" /usr/share/icons/gnome/32x32/apps/openofficeorg-20-base.xpm ooffice
+			prog "KolourPaint" /usr/share/pixmaps/kolourpaint.xpm kolourpaint
+	}
+
+	menu "File Managers" folder {
+		prog krusader krusader krusader
+		prog rox-filer rox-filer rox-filer
+		prog xfe xfe xfe
+		prog xnc xnc xnc
+		prog gnome-commander gnome-commander gnome-commander
+		prog "Synchronize files" grsync grsync
+	}
+	
+	menu "FTP Manager" folder {
+		prog filezilla filezilla filezilla
+		prog gftp gftp gftp
+		prog transmission transmission transmission
+		prog qtorrent qtorrent qtorrent
+		prog axel-kapt axel-kapt axel-kapt
+	}
+
+	menu "Burning" folder {
+		prog k3b k3b k3b
+		prog brasero brasero brasero
+		prog nautilus-cd-burner nautilus-cd-burner nautilus-cd-burner
+	}
+
+	menu "System" folder {
+		prog "Xfce power manager" xfce4-power-manager xfce4-power-manager 
+		prog "bum: Boot-up manager" bum bum
+		prog "rcconf: Runlevel configuration" rcconf xrcconf
+		prog update-manager update-manager update-manager
+		prog system-config-printer system-config-printer system-config-printer 
+		prog "UNetbooting Create live CDs" unetbootin unetbootin 
+		prog "Screen config GTK" displayconfig-gtk displayconfig-gtk 
+		prog "Screen config NVIDIA" nvidia-config nvidia-config 
+	}
+
+	menu "Dictionaries" folder {
+		prog "Artha Dictionary" artha artha
+		prog "Goldendic Dictionary" goldendict goldendict
+		prog "Everest Dictionary" everest everest
+		prog "Stardic Dictionary" stardict stardict
+		prog "Wordtrans Dictionary" qwordtrans qwordtrans
+	}
+
+	menu "apps" folder {
+		menu "Molecular Dynamics" folder {
+			menu "Gromacs (mdynamics)"  folder {
+				prog "Demo tutorial"	gromacs firefox /usr/share/doc/gromacs-doc/html/online/gmxdemo.html
+				prog "All docs"	gromacs	 firefox /usr/share/doc/gromacs
+			}	
+			menu "Tinker" folder {
+				prog "FFE" ffe /opt/tinker/ffe
+				prog "All docs" tinker firefox /opt/tinker/doc
+			}
+			menu "MGLTools" folder {
+				prog "Autodock gui" adt adt
+				prog "Python Molecular Viewer" pmv	pmv
+				prog "Python Visual Prog Environment" vision vision
+			}
+		}
+	}
+}
+
+menu "Programming" folder {
+	prog "IPython" ipython ipython"
+	prog "Code::Blocks C++ IDE" codeblocks codeblocks
+	prog "Python docs" python dillo /usr/share/doc/python2.5/html 
+	prog "QT docs" qt dillo /usr/share/qt3/doc/html/index.html 
+}
+separator
+
+menu "Downloaders" folder {
+	prog prozgui prozgui prozgui
+	prog d4x d4x d4x
+}
+
+prog xterm xterm xterm -ls
+prog rxvt xterm rxvt -rv -C -fn 8x16 -sl 500
+prog fte fte fte
+prog NEdit nedit nedit
+#prog Mozilla mozilla mozilla
+prog "Mozilla Firefox" /usr/share/pixmaps/firefox.png firefox
+prog XChat xchat xchat
+prog Gimp /usr/share/gimp/2.0/images/wilber-icon.png gimp
+separator
+
+menu Applications folder {
+    menu Editors folder {
+        prog fte fte fte
+	prog vim vim gvim 
+        prog xemacs xemacs xemacs
+        prog NEdit nedit nedit
+        prog xedit xedit xedit
+        prog Lyx emacs lyx
+    }
+    menu "Mail Agents" folder {
+        prog Mutt mutt x-terminal-emulator -e mutt
+    }
+    menu "WWW Browsers" folder {
+        prog Netscape netscape netscape
+        prog Mozilla mozilla mozilla
+        prog "Mozilla Firefox" /usr/share/pixmaps/firefox.png mozilla
+        prog Galeon galeon galeon
+        prog w3m lynx x-terminal-emulator -e w3m
+        prog Links lynx x-terminal-emulator -e links
+    }
+    menu Graphics folder {
+        prog Gimp gimp gimp
+        prog XV xv xv
+        prog XPaint xpaint xpaint
+        prog XFig xfig xfig
+    }
+    prog "Acrobat Reader" pdf acroread
+    prog "DVI Previewer" xdvi xdvi
+    prog "Ghostview" ghostview gv
+    prog "xfm" xfm xfm
+}
+menu Games folder {
+    prog "Koules for X" koules xkoules -f
+    prog Xboing xboing xboing
+    prog Xboard xboard xboard
+    prog XGalaga xgalaga xgal
+    prog XDemineur xdemineur xdemineur
+    prog ppracer /usr/share/pixmaps/ppracer.xpm /usr/games/ppracer
+}
+menu System folder {
+    prog "Control Panel" gnome-control-center
+    prog xload xload xload
+    prog xosview xosview xosview
+    menu "Window Managers" folder {
+        restart icewm - icewm
+        restart icewm-gnome - icewm-gnome
+        restart icewm-experimental - icewm-experimental
+        restart icewm-lite - icewm-lite
+        restart wmaker - wmaker
+        restart enlightenment - enlightenment
+        restart blackbox - blackbox
+        restart sawfish - sawfish
+        restart sawfish2 - sawfish2
+        restart metacity - metacity
+        restart fvwm2 - fvwm2
+        restart fvwm - fvwm
+    }
+}
+menu Utilities folder {
+    menu Multimedia folder {
+        prog XPlayCD xplaycd xplaycd
+        prog XMixer xmixer xmixer
+    }
+    prog "Font Selector" xfontsel xfontsel
+    prog Clock xclock xclock
+    prog Magnify xmag xmag
+    prog Calculator xcalc xcalc
+    prog Colormap xcolormap xcmap
+    prog Clipboard xclip xclipboard
+    prog xkill bomb xkill
+    separator
+    prog "Screen Saver" xlock xlock -nolock
+    prog "Screen Lock" xlock xlock
+}
+menufile Toolbar folder toolbar
+separator
+menuprog "Gnome" folder icewm-menu-gnome2 --list /usr/share/gnome/vfolders
+menuprog KDE folder icewm-menu-gnome2 --list /usr/share/applnk

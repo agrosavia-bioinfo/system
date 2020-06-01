@@ -1,0 +1,6 @@
+ #rxvt -fn 7x14 -bg rgb:00/02/37 -fg cyan -ls -e vim $1 &
+# Mini
+ rxvt -fn 6x12 -bg rgb:00/02/37 -fg cyan -ls -e vim $1 &
+
+# Default
+ #rxvt -fn 8x16 -ls -e vim $1 &

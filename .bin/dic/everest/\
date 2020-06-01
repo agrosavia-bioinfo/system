@@ -1,0 +1,1 @@
+xterm -geometry 40x40+750+100 -fn 8x16 -bg rgb:4b/00/82 -fg cyan -e /opt/bin/everest-multi&

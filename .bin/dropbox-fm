@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export DROPBOX_HOME=/home/lg/cloud/fm
+HOME=$DROPBOX_HOME /usr/bin/dropbox-org start 

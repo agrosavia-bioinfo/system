@@ -1,0 +1,1 @@
+rsync --partial -L -avhe "ssh -p 2245" lgarreta@bioinfo.univalle.edu.co:/home/lgarreta/$1 .

@@ -1,0 +1,1 @@
+xpdf -papercolor lavender -cont -aa yes $1

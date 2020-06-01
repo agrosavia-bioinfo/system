@@ -1,0 +1,1 @@
+killlg mupdf -auto

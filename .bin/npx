@@ -1,0 +1,5 @@
+echo $PWD > ~/tmp/config/curpath.cfg
+rm ~/CURDIR &> /dev/null
+ln -s $PWD ~/CURDIR
+
+#echo "user_pref(\"browser.download.lastDir\", \"$PWD\");" >> ~/.mozilla/firefox/j0yedwku.default/user.js

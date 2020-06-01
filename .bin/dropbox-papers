@@ -1,0 +1,3 @@
+#!/bin/bash
+
+HOME=/home/lg/cloud/papers /usr/bin/dropbox-org start 

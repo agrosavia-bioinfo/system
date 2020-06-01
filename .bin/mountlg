@@ -1,0 +1,2 @@
+mount -t nfs lg:/home/lg /home/lg/phd-lg
+

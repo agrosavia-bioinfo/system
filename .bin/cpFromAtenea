@@ -1,0 +1,1 @@
+scp lgarreta@atenea.unicauca.edu.co:/tmp/$1 .

@@ -1,0 +1,16 @@
+files=$1
+dir=$2
+user=$3
+
+if [ "$3" == '' ]; then
+    user=lg
+fi
+if [ "$2" == '' ]; then
+    dir=/tmp
+fi
+
+cmd="rsync -av $user@gebixserver:$dir/$files /tmp"
+echo $cmd
+rm /tmp/$files
+
+$cmd

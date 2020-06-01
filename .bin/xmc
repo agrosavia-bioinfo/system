@@ -1,0 +1,7 @@
+#rxvt -geometry 150x50+50+100 -fn 7x14 -bg black -fg cyan -e mc 
+lg-key-reassign-mc.sh
+#curdir=$(cat ~/tmp/config/curpath.cfg)
+#curdir=`tail -1 ~/.mc/history|cut -d= -f2`
+#xterm-xmc -T MC -e "mc $curdir" &> /dev/null &
+#xt xterm-xmc
+x mc

@@ -1,0 +1,2 @@
+scp -P 2224 $1 lg@bioinfo.univalle.edu.co:/tmp
+

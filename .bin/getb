@@ -1,0 +1,2 @@
+# Get files from BUFFER to current directory
+mv /BUF/* .

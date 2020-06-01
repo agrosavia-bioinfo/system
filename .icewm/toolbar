@@ -1,0 +1,27 @@
+# This is a default toolbar definition file for IceWM
+#
+# Place your personal variant in $HOME/.icewm directory.
+
+#prog    "?" todo openoffice /home/lgarreta/others/personal/todo/todo.ods
+prog 	XTerm 	xterm  x
+prog    XBind   xbind  xbind 
+prog    Firefox firefox firefox 
+prog    Terminal gnome-terminal gnome-terminal 
+
+menu "Thesis" folder {
+	prog	ksnapshot ksnapshot /usr/bin/ksnapshot --region  
+	prog	translate translate /home/lg/.bin/lgTranslate.sh
+	prog    Mendeley  mendeleydesktop.png refs
+	}
+#menu "Thesis" folder {
+#		prog "Thesis Guide" Writing mupdf /home/lg/.icewm/hot/wrt-Esphinstone-SmallGuideToWritingYourThesis.pdf
+#}
+#prog	ksnapshot ksnapshot /usr/bin/ksnapshot --region  
+#prog	translate translate /home/lg/.bin/lgTranslate.sh
+
+
+#prog FTE fte fte
+#prog Netscape netscape netscape
+#prog    "Vim" vim /usr/bin/gvim -f
+#"WWW" /usr/share/pixmaps/firefox.png x-www-browser
+#prog 	MixerControl vol_16x16.png /home/lg/.icewm/mixerapp.py

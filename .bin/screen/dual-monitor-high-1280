@@ -1,0 +1,5 @@
+cvt 1280 1024
+xrandr --newmode "1280" 146.25  1280 1784 1960 2240 1024 1053 1059 1089 -hsync +vsync  
+xrandr --addmode VGA-0 1280
+xrandr --output VGA-0 --mode 1280
+xrandr --output LVDS1 --mode 1680x1050 --output VGA-0 --mode 1280 --right-of LVDS1

@@ -1,0 +1,1 @@
+gv --media=letter --orientation=landscape $1

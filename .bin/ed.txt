@@ -1,0 +1,14 @@
+poe:x:1003:1003::/home/ed/poe:/bin/bash
+debian:x:1004:1004::/home/ed/debian:/bin/bash
+camv:x:1005:1005::/home/ed/camv:/bin/bash
+dvinasco:x:1006:1006::/home/ed/dvinasco:/bin/bash
+dsanchez:x:1007:1007::/home/ed/dsanchez:/bin/bash
+ecardona:x:1008:1008::/home/ed/ecardona:/bin/bash
+eportilla:x:1009:1009::/home/ed/eportilla:/bin/bash
+jtrejos:x:1010:1010::/home/ed/jtrejos:/bin/bash
+mherrera:x:1011:1011::/home/ed/mherrera:/bin/bash
+jupazulu:x:1012:1012::/home/ed/jupazulu:/bin/bash
+jossa:x:1013:1013::/home/ed/jossa:/bin/bash
+jgomez:x:1014:1014::/home/ed/jgomez:/bin/bash
+jvergara:x:1015:1015::/home/ed/jvergara:/bin/bash
+avarona:x:1016:1016::/home/ed/avarona:/bin/bash

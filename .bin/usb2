@@ -1,0 +1,2 @@
+mkdir ~/usb
+mount -a /dev/sdb2 usb

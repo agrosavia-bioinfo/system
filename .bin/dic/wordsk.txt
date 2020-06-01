@@ -1,0 +1,18 @@
+blue:azul:I like the blue color
+red:rojo:A red dress 
+notebook:portatil:My notebook is ASUS
+mouse:raton:I don't like to see a mouse
+honey:miel:I like honey
+baby:bebe:I see a baby in the garden
+girl:ninha:I like to talk with this girl
+boy:ninho:That boy is very strong
+class:clase:I have to create a class
+monkey:mono:Monkeys are crazy animals
+tiger:tigre:The tiger can eat a man
+lion:leon:The lion doesn't like to eat
+day:dia:This is a beautiful day
+sun:sol:The sun rises every day
+moon:luna:I fall in love with th moon
+car:carro:I don't like cars
+bike:bicicleta:I like my new bike
+motorbike:moto:I have a motorbike

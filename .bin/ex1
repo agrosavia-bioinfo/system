@@ -1,0 +1,22 @@
+LANG=en_US.ISO8859-1 
+#ssh -p 2224 -X lg@bioinfo.univalle.edu.co
+#ssh -XC -c blowfish-cbc,arcfour lg@bioinfo.univalle.edu.co -p 2224
+#
+SERVER=bioinfo.univalle.edu.co
+PORT=2245
+USER=lgarreta
+if [ $(hostname) == 'dell' ]; then
+	echo "1" $(hostname)
+	#cmm="ssh -C -c blowfish-cbc,arcfour  $USER@$SERVER -p $PORT"
+	cmm="ssh lgarreta@bioinfo.univalle.edu.co -p 2245"
+	echo $cmm
+	eval $cmm
+fi
+
+
+if [ `hostname` == 'bioinfo' ]; then
+	ssh -YC -c arcfour lgarreta@bioinfo.univalle.edu.co -p 2245 -o ProxyCommand="corkscrew proxy.unicauca.edu.co 3128 %h %p"
+fi
+
+
+

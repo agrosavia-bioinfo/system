@@ -1,0 +1,71 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 10 (0xa)
+        Signature Algorithm: md5WithRSAEncryption
+        Issuer: C=CO, ST=Valle del Cauca, L=Cali, O=OpenVPN-EISC, OU=Escuela de Ingenieria de Sistemas y Computacion, CN=CA OpenVPN EISC-Univalle/emailAddress=root@eisc.univalle.edu.co
+        Validity
+            Not Before: Dec  7 15:32:04 2009 GMT
+            Not After : Dec  5 15:32:04 2019 GMT
+        Subject: C=CO, ST=Valle del Cauca, O=OpenVPN-EISC, OU=Escuela de Ingenieria de Sistemas y Computacion, CN=Luis Ernesto Garreta Unigarro/emailAddress=lgarreta@gmail.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:9d:79:74:fd:e5:62:89:38:16:19:ce:2f:af:d0:
+                    b9:ec:d6:42:26:e9:58:47:9e:5e:b0:98:96:09:41:
+                    b0:88:9e:99:fb:fa:9d:74:51:ac:22:1a:f5:f1:99:
+                    c7:b5:6a:24:e0:42:e3:2e:18:59:7d:d7:e2:e3:ac:
+                    7f:e1:33:60:cf:17:22:96:ff:3f:34:b1:dc:8f:b6:
+                    44:4e:de:d7:49:d7:fd:8a:17:37:a9:06:fc:b7:16:
+                    5c:26:b0:6f:88:ca:ec:a7:fb:78:6c:bc:83:26:29:
+                    bd:04:19:31:fe:ac:34:57:d1:ad:5d:0d:5a:e5:15:
+                    8b:49:ce:28:e6:9a:b4:55:67
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                9B:E5:07:84:53:5F:17:E5:A2:A7:B7:82:12:D1:23:BE:79:A8:C0:45
+            X509v3 Authority Key Identifier: 
+                keyid:27:1E:32:16:11:45:BA:25:75:9B:83:41:3B:1E:3F:8F:D0:A4:58:54
+                DirName:/C=CO/ST=Valle del Cauca/L=Cali/O=OpenVPN-EISC/OU=Escuela de Ingenieria de Sistemas y Computacion/CN=CA OpenVPN EISC-Univalle/emailAddress=root@eisc.univalle.edu.co
+                serial:95:EC:A6:23:E3:D7:A2:04
+
+    Signature Algorithm: md5WithRSAEncryption
+        06:cf:27:66:40:a8:33:47:41:e6:6a:dc:24:01:d3:21:24:46:
+        97:f6:27:7d:b4:ed:b4:67:37:6b:ab:8a:c8:bc:ab:4a:dd:ec:
+        76:23:96:d6:34:1b:88:6a:b5:11:a0:7f:5e:91:79:ae:cc:39:
+        09:01:ef:66:a2:27:ff:07:97:e3:03:57:ab:da:35:ba:02:5b:
+        e8:e4:bb:84:f2:98:52:91:cc:c8:20:8b:c7:6e:c8:1d:c4:52:
+        73:39:b6:50:db:03:7b:6d:96:65:73:5f:25:de:73:8f:45:d1:
+        1e:92:80:a5:e0:b8:6e:ca:ad:40:f6:ba:03:9a:43:df:27:53:
+        82:86
+-----BEGIN CERTIFICATE-----
+MIIEezCCA+SgAwIBAgIBCjANBgkqhkiG9w0BAQQFADCB1DELMAkGA1UEBhMCQ08x
+GDAWBgNVBAgTD1ZhbGxlIGRlbCBDYXVjYTENMAsGA1UEBxMEQ2FsaTEVMBMGA1UE
+ChMMT3BlblZQTi1FSVNDMTgwNgYDVQQLEy9Fc2N1ZWxhIGRlIEluZ2VuaWVyaWEg
+ZGUgU2lzdGVtYXMgeSBDb21wdXRhY2lvbjEhMB8GA1UEAxMYQ0EgT3BlblZQTiBF
+SVNDLVVuaXZhbGxlMSgwJgYJKoZIhvcNAQkBFhlyb290QGVpc2MudW5pdmFsbGUu
+ZWR1LmNvMB4XDTA5MTIwNzE1MzIwNFoXDTE5MTIwNTE1MzIwNFowgcMxCzAJBgNV
+BAYTAkNPMRgwFgYDVQQIEw9WYWxsZSBkZWwgQ2F1Y2ExFTATBgNVBAoTDE9wZW5W
+UE4tRUlTQzE4MDYGA1UECxMvRXNjdWVsYSBkZSBJbmdlbmllcmlhIGRlIFNpc3Rl
+bWFzIHkgQ29tcHV0YWNpb24xJjAkBgNVBAMTHUx1aXMgRXJuZXN0byBHYXJyZXRh
+IFVuaWdhcnJvMSEwHwYJKoZIhvcNAQkBFhJsZ2FycmV0YUBnbWFpbC5jb20wgZ8w
+DQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJ15dP3lYok4FhnOL6/QuezWQibpWEee
+XrCYlglBsIiemfv6nXRRrCIa9fGZx7VqJOBC4y4YWX3X4uOsf+EzYM8XIpb/PzSx
+3I+2RE7e10nX/YoXN6kG/LcWXCawb4jK7Kf7eGy8gyYpvQQZMf6sNFfRrV0NWuUV
+i0nOKOaatFVnAgMBAAGjggFqMIIBZjAJBgNVHRMEAjAAMCwGCWCGSAGG+EIBDQQf
+Fh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTAdBgNVHQ4EFgQUm+UHhFNf
+F+Wip7eCEtEjvnmowEUwggEKBgNVHSMEggEBMIH+gBQnHjIWEUW6JXWbg0E7Hj+P
+0KRYVKGB2qSB1zCB1DELMAkGA1UEBhMCQ08xGDAWBgNVBAgTD1ZhbGxlIGRlbCBD
+YXVjYTENMAsGA1UEBxMEQ2FsaTEVMBMGA1UEChMMT3BlblZQTi1FSVNDMTgwNgYD
+VQQLEy9Fc2N1ZWxhIGRlIEluZ2VuaWVyaWEgZGUgU2lzdGVtYXMgeSBDb21wdXRh
+Y2lvbjEhMB8GA1UEAxMYQ0EgT3BlblZQTiBFSVNDLVVuaXZhbGxlMSgwJgYJKoZI
+hvcNAQkBFhlyb290QGVpc2MudW5pdmFsbGUuZWR1LmNvggkAleymI+PXogQwDQYJ
+KoZIhvcNAQEEBQADgYEABs8nZkCoM0dB5mrcJAHTISRGl/YnfbTttGc3a6uKyLyr
+St3sdiOW1jQbiGq1EaB/XpF5rsw5CQHvZqIn/weX4wNXq9o1ugJb6OS7hPKYUpHM
+yCCLx27IHcRSczm2UNsDe22WZXNfJd5zj0XRHpKApeC4bsqtQPa6A5pD3ydTgoY=
+-----END CERTIFICATE-----

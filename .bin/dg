@@ -1,0 +1,3 @@
+dillo www.google.com &
+sleep 1
+xdotool search --name "Dillo: Google" windowactivate key Tab

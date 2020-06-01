@@ -1,0 +1,2 @@
+cd ~/.bin/vpn-lg
+sudo ./vpn.sh

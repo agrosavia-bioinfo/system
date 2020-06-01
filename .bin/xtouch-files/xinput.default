@@ -1,0 +1,48 @@
+Device 'ETPS/2 Elantech Touchpad':
+	Device Enabled (131):	1
+	Coordinate Transformation Matrix (133):	1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000
+	Device Accel Profile (255):	1
+	Device Accel Constant Deceleration (256):	2.500000
+	Device Accel Adaptive Deceleration (257):	1.000000
+	Device Accel Velocity Scaling (258):	12.500000
+	Synaptics Edges (259):	117, 2823, 75, 1325
+	Synaptics Finger (260):	1, 1, 260
+	Synaptics Tap Time (261):	180
+	Synaptics Tap Move (262):	143
+	Synaptics Tap Durations (263):	180, 180, 100
+	Synaptics ClickPad (264):	0
+	Synaptics Tap FastTap (265):	0
+	Synaptics Middle Button Timeout (266):	75
+	Synaptics Two-Finger Pressure (267):	282
+	Synaptics Two-Finger Width (268):	7
+	Synaptics Scrolling Distance (269):	65, 65
+	Synaptics Edge Scrolling (270):	1, 0, 0
+	Synaptics Two-Finger Scrolling (271):	1, 0
+	Synaptics Move Speed (272):	1.000000, 1.750000, 0.061425, 40.000000
+	Synaptics Edge Motion Pressure (273):	30, 160
+	Synaptics Edge Motion Speed (274):	1, 260
+	Synaptics Edge Motion Always (275):	0
+	Synaptics Off (276):	0
+	Synaptics Locked Drags (277):	0
+	Synaptics Locked Drags Timeout (278):	5000
+	Synaptics Tap Action (279):	2, 3, 0, 0, 1, 3, 0
+	Synaptics Click Action (280):	1, 1, 0
+	Synaptics Circular Scrolling (281):	0
+	Synaptics Circular Scrolling Distance (282):	0.100000
+	Synaptics Circular Scrolling Trigger (283):	0
+	Synaptics Circular Pad (284):	0
+	Synaptics Palm Detection (285):	0
+	Synaptics Palm Dimensions (286):	10, 200
+	Synaptics Coasting Speed (287):	20.000000, 50.000000
+	Synaptics Pressure Motion (288):		... of unknown type CARDINAL
+
+	Synaptics Pressure Motion Factor (289):	1.000000, 1.000000
+	Synaptics Resolution Detect (290):	1
+	Synaptics Grab Event Device (291):	1
+	Synaptics Gestures (292):	1
+	Synaptics Capabilities (293):	1, 0, 1, 1, 1, 1, 1
+	Synaptics Pad Resolution (294):	1, 1
+	Synaptics Area (295):	0, 0, 0, 0
+	Synaptics Noise Cancellation (296):	16, 16
+	Device Product ID (250):	2, 14
+	Device Node (251):	"/dev/input/event5"

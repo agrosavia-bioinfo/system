@@ -1,0 +1,168 @@
+=== Bancos ======
+BdB: \
+     /
+
+==== Github repos=====
+	- agrosavia-bioinformatics: lgarreta@agrosavia.co (agr2020)
+	  - MultiGWAS
+	- agrosavia-bioinfo (chv21.A)
+	- lgbio:  lgarreta@yahoo.com (chv2001)
+	- https://github.com/lgarreta/
+		- Reduction
+		- Old-Reduction
+		- bioprt
+		- iot
+		- Courses (Javeriana)
+	- https://github.com/proteinpaths
+		- 01-Reduction (old)
+		- 03-Properties
+		- datasets
+		- 
+
+---- OLD (july 16/2016) ----
+===== Git Servers =====
+
+bitbucket: lgarreta: cv 2001 (Seams: Bystroff)
+github    : lgarreta: mpdist, gebixw, phd, all.
+
+
+===== Cuentas Microsoft =====
+iotlg@outlook.com           : For azure (July)
+luis.garreta@outlook.com : Primary
+luisg.puj@outlook.com      : alias IoT Azure
+luisg.test@outlook.com     : alias Azure ML
+
+
+===== IoT =====
+Wiki PUJ: cic.puj.edu.co/wikicaiot (luis.garreta/cv21)
+Google: pujceiot [at] gmail (C e a I o T 2 0 1 6)
+outlook: pujceiot [at] outlook (C e a I o T 2 0 1 6)
+dropbox: iotlg@outlook.com
+
+=== Cuentas ===
+   Sandra Milena Roa: Bancolombia-ahorros: 24212533463
+
+=== Javeriana ===
+luis.garreta/cveA
+
+=== Unicatolica ===
+    Banner: cedula/usergmail
+
+== emails ===
+  yahoo: luis.garreta (chv21)
+  yahoo: garretaluis, insecure
+  yahoo: lgarreta, chv21
+  gmail: lgarreta, secure
+  gmail: garreta.luis, insecure
+  yahoo: iotpujcali, insecure (For Mendeley IotPujCali)
+  outlook: lgarreta, chv21
+  outlook: luis.garreta (chv21)
+  outlook: lgiot, chv21?
+
+=== Mendeley ===
+IoT Papers Mendeley IoT: iotpujcali [@] yahoo [.] com:
+LG Papers (Protein Folding and others) mendeley, garretaluis@yahoo.com, unsecure
+LG 2 (Empty)  lgarreta@gmail.com, unsecure
+
+=== Dropbox ===
+  iot docs      : iotlg@outlook.com
+   Phd Thesis:   phd.luisg@gmail.com: chevive
+   LuisG's docs: lgarreta@gmail.com: vive 2001
+   Dropbox Distributed Blast (fm user):
+   luisg_gebixw@yahoo.com:vive2001
+
+   Documents univalle :
+    lgarreta@univalle.edu.co : vive 2001
+   Gebixw development :
+    garretaluis@yahoo.com: vive 2001
+   Phd Distributed Framework:
+    luis.garreta@correounivalle.edu.co: vive2001 (free)
+   unicauca :
+    lgarreta@unicauca.edu.co : cien fuegos
+    - docs
+      - curriculum
+      - master
+      - virtual-app-genezilla
+    - papers
+
+   Old Phd Tesis?
+    lgarreta@yahoo.com, che01,
+    - all-globulars
+    - chapters
+    - dev
+    - fotos-kamilo
+    - metrics
+    - opt
+    - profiles
+
+================= Home ===============================
+    Address: Calle 52A # 54-69 Barrio la Base, Cali-Colombia
+
+
+
+On Wed, Aug 27, 2014 at 12:07 PM, Luis Garreta <lgarreta@gmail.com> wrote:
+      >>
+      >>
+      >>
+      >> Students' ids (code for restaurant)
+      >> ===========================
+      >> Cesar Chaves: 0933890: 1144145976
+      >> Luis Garreta:     0700036
+      >> ====
+      >>
+      >> copy (Cloud storage)
+      >> ====
+      >> Luis Garreta, luis.garreta@correo.univalle.edu.co, vive2001
+
+      >> Servers:
+      >> ======
+      >> Bioinformatic web server
+      >>   - bioinfo: bioinfo2012 (bioinfo: bioserver)
+      >>   - root: rootbio
+      >>   - lgarreta:che..01
+      >>
+      >> Blogs
+      >> ====
+      >> website yolasite http://monteadentro.yolasite.com/    lgarreta@gmail.com, chevive01
+      >>
+      >>
+      >> emails
+      >> ======
+      >> yahoo, garretaluis, unsecuer
+      >> gmail, lgarreta, secure
+      >> gmail garreta.luis, secure
+      >>
+      >> sites
+      >> =====
+      >> mendeley, garretaluis@yahoo.com, unsecure
+      >> dropbox. genezilla.univalle@yahoo.com, genezillauv
+      >>
+      >>>
+      >>> website yolasite http://monteadentro.yolasite.com/
+      >>> lgarreta@gmail.com, chevive01
+      >>> dropbox, lgarreta@gmail.yahoo.com, chevive2001,
+      >>>
+      >>>
+      >>> emails
+      >>> ======
+      >>> yahoo, garretaluis, unsecuer
+      >>> gmail, lgarreta, secure
+      >>> gmail garreta.luis, secure
+      >>>
+      >>> sites
+      >>> =====
+      >>> mendeley, garretaluis@yahoo.com, unsecure
+      >>> dropbox. genezilla.univalle@yahoo.com, genezillauv
+      >>>
+      >>> dropbox
+      >>> =======
+      >>> univalle : lgarreta@univalle.edu.co : chevive
+      >>> unicauca : lgarreta@unicauca.edu.co : cienfuegos
+      >>> phd: phd.luisg@gmail.com: chevive
+      >>>
+      >>> Bioinformatic web server
+      >>> ========================
+      >>> bioinfo: bioserver
+      >>> root: rootbio
+
+

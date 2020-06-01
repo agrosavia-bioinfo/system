@@ -1,0 +1,25 @@
+#!/usr/bin/python
+
+import sys, os
+
+size = 40
+if len(sys.argv) == 1:
+	doc = "/x.ps"
+else:
+	doc = sys.argv[1]
+	if doc.isdigit():
+		size = int (doc)
+		doc = "/tmp/x.ps"
+		
+if doc.split('.')[1] == "pdf":
+	comm = "pdf2ps " + doc + " /tmp/x.ps"
+	doc = "/tmp/x.ps"
+	os.system (comm)
+
+if len (sys.argv) > 2:
+	size = int (sys.argv[2])	
+
+comm = "psnup -2 -pletter -b-"+str(size)+" "+doc+" x2.ps; xgv x2.ps" 
+print comm
+os.system (comm)
+

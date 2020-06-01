@@ -1,0 +1,3 @@
+cmm="$1 lg@lg:/tmp"
+echo cmm
+eval cmm

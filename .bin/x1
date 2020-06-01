@@ -1,0 +1,1 @@
+xterm -b 3 -bg black -fg cyan -fn 10x20 &

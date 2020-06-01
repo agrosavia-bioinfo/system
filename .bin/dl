@@ -1,0 +1,21 @@
+
+#dillo www.linguee.com &
+#sleep 1
+#xdotool search --name "Dillo: Lingue | Dictionary for German, French, Spanish, and more" windowactivate key Tab+Tab
+
+echo $http_proxy > /tmp/a
+export http_proxy=
+SITE=$1
+echo ">>>" "$SITE" > /tmp/a
+dillo $SITE &
+
+sleep 2
+#wmctrl -r :ACTIVE: -e 25,420,13,840,1000
+if [ "$SITE" = "www.linguee.com" ]; then
+	#( speaker-test -t sine -f 1000 )& pid=$! ; sleep 1s ; kill -9 $pid
+	xdotool key --window "$(xdotool search --class dillo | head -n 1)" Tab + Tab
+else
+	#( speaker-test -t sine -f 3000 )& pid=$! ; sleep 1s ; kill -9 $pid
+	xdotool key --window "$(xdotool search --class dillo | head -n 1)" Tab 
+fi
+xdotool key --window "$(xdotool search --class dillo | head -n 1)" F12

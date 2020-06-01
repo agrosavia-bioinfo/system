@@ -1,0 +1,9 @@
+cat ~/.bin/JDic/words.txt > ~/.bin/JDic/b
+
+if [ '$1' ]; then
+	words=$1
+else
+	read words
+fi
+echo $words > ~/.bin/JDic/words.txt
+cat ~/.bin/JDic/b >> ~/.bin/JDic/words.txt

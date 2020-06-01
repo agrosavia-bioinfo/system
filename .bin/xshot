@@ -1,0 +1,8 @@
+sleep 0.1
+xdotool key Alt+e 
+
+sleep 0.1
+xdotool key s + n
+sleep 0.1
+xdotool key Return
+

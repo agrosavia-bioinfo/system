@@ -1,0 +1,1 @@
+rxvt -fn 7x14 -bg black -fg yellow -e vi ~/.icewm

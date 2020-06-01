@@ -1,0 +1,12 @@
+ffmpeg -i inglesSinBarreras-05.mp3 -ss 00:00:00 -t 00:10:00 isb05-01.mp3 &
+ffmpeg -i inglesSinBarreras-05.mp3 -ss 00:10:00 -t 00:10:00 isb05-02.mp3 &
+ffmpeg -i inglesSinBarreras-05.mp3 -ss 00:20:00 -t 00:10:00 isb05-03.mp3 &
+ffmpeg -i inglesSinBarreras-05.mp3 -ss 00:30:00 -t 00:10:00 isb05-04.mp3 &
+ffmpeg -i inglesSinBarreras-05.mp3 -ss 00:40:00 -t 00:10:00 isb05-05.mp3 &
+ffmpeg -i inglesSinBarreras-05.mp3 -ss 00:50:00 -t 00:10:00 isb05-06.mp3 &
+ffmpeg -i inglesSinBarreras-05.mp3 -ss 01:00:00 -t 00:10:00 isb05-07.mp3 &
+ffmpeg -i inglesSinBarreras-05.mp3 -ss 01:10:00 -t 00:10:00 isb05-08.mp3 &
+ffmpeg -i inglesSinBarreras-05.mp3 -ss 01:20:00 -t 00:10:00 isb05-09.mp3 &
+ffmpeg -i inglesSinBarreras-05.mp3 -ss 01:30:00 -t 00:10:00 isb05-10.mp3 &
+ffmpeg -i inglesSinBarreras-05.mp3 -ss 01:40:00 -t 00:10:00 isb05-11.mp3 &
+ffmpeg -i inglesSinBarreras-05.mp3 -ss 01:50:00 -t 00:15:00 isb05-12.mp3 &

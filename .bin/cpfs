@@ -1,0 +1,5 @@
+FULLPATH_REMOTE_FILE=$1
+#scp -P 2224 lg@sim:/tmp/$1 .
+cmm='rsync -av -e "ssh -p 2224" lg@eisc.univalle.edu.co:$FULLPATH_REMOTE_FILE .'
+echo $cmm
+eval $cmm

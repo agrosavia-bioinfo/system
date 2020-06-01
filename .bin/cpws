@@ -1,0 +1,13 @@
+SERVER=bioinformatica
+
+FILE=$1
+DIR=$2
+USER=$3
+
+[ "$USER" == '' ] && USER=lg
+[ "$DIR" == '' ] && DIR=/tmp
+
+CMD="rsync -av $FILE $USER@$SERVER:$DIR"
+
+echo $CMD
+$CMD

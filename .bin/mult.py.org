@@ -1,0 +1,17 @@
+#!/usr/bin/python
+
+import os, sys
+
+cmm = sys.argv [1]
+pattern = sys.argv [2]
+
+print pattern
+files = filter (lambda x:pattern in x, os.listdir("."))
+print files
+input()
+for i in files:
+	fullCommand = cmm + " "+ i + " &"
+	print (fullCommand)
+	os.system (fullCommand)
+
+

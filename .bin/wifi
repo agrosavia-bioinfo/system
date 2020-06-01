@@ -1,0 +1,6 @@
+#iwlist ath0 scan|more
+sudo iwlist wlp2s0 scan|more
+read -p "NETWORK: " network
+#iwconfig wlan0 essid LEMISA key s:LEMISA47
+sudo iwconfig wlp2s0 essid $newtwok 
+sudo dhclient wlp2s0

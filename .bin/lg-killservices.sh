@@ -1,0 +1,2 @@
+killlg modem-manager -auto
+

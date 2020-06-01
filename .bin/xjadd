@@ -1,0 +1,1 @@
+xterm -T Jadd -geometry 40x10 -fn 8x16 -bg darkgreen -fg cyan -ls  -e jadd

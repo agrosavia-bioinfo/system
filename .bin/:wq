@@ -1,0 +1,2 @@
+# Disable mouse n seconds while you typing
+syndaemon -t -d -i 4

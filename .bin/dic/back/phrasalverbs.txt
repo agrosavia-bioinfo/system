@@ -1,0 +1,10 @@
+act_up:funcionar_mal
+add*up+:totalizar
+add_up_to+:equivaler_a
+add_up:tener_sentido
+ask_out:invitar_a_salir
+back_out:echarse_atrás
+back_out_of:desistir_de
+back*up+:respaldo
+back_up:retroceder
+bawl_out:regañar

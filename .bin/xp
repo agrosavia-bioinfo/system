@@ -1,0 +1,11 @@
+#xterm -fn 7x14 -bg black -fg skyblue -geometry 80x40 -name xR -title xR -e "cd `xclip -o`; R" 
+#xterm -fn 7x14 -bg black -fg skyblue -geometry 80x40 -name xR -e R 
+
+FNT='UbuntuMono'
+FONT="8x16"
+BG=black
+FG=skyblue
+title=iPy
+COMMAND="-e ipython3"
+cmm="xterm-R -fa $FNT -fs 11 -geometry 60x20 -fn $FONT -bg $BG -fg $FG -title $title -e ipython3"
+$cmm

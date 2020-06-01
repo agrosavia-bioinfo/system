@@ -1,0 +1,86 @@
+#
+#
+# Java jar app (spreadsheets)
+regex/\.(jar)
+	Open=(java -jar %f &)
+
+# Tabular data (spreadsheets)
+regex/\.(raw|ped|map|csv|tbl|scores)
+	Open=(xvd %f)
+	View=(xed %f)
+	Edit=(libreoffice --calc  %f > /dev/null 2>&1 &)
+
+regex/\.(adjusted|txt|csv|ped|map|num|tbl|scores|qtls|kin0)$
+	Open=(xed %f)
+	View=(xvd %f)
+	Edit=(libreoffice --calc  %f > /dev/null 2>&1 &)
+#
+# dia flowchar
+regex/\.(dia)$
+	Open=dia %f  > /dev/null 2>&1 &
+# PDB
+regex/\.(times)$
+	Open=gedit %f  > /dev/null 2>&1 &
+regex/\.(pdb)$
+	#Open=xpymol.sh %f > /dev/null 2>&1 &
+	#Open=xpymol.sh %f > /dev/null 2>&1 &
+	View=(dillo %f)
+
+
+# HTML
+regex/\.(html|htm)$
+	Open=(surf %f > /dev/null 2>&1 &)
+	#Open=(chrome %f > /dev/null 2>&1 &)
+	View=(xed %f)
+	Edit=(dillo %f)
+
+# Media mp3
+regex/\.(mp3|MP3|m4a)$
+	#Open=smplayer %f > /dev/null 2>&1 &
+	Open= xmplayer %f 
+	#Open=audacity %f > /dev/null 2>&1 &
+
+# PDFs
+regex/\.(pdf|pdfx)
+	Open=(pdf %f > /dev/null 2>&1 &)
+	#Open=(acroread -openInNewWindow %f > /dev/null 2>&1 &)
+	#Open=(okular --unique %f &)
+	#Open=(mupdf %f &)
+	#Open=(evince %f &)
+	#Open=(xxpdf %f &)
+
+### Archives ###
+
+# .tgz, .tpz, .tar.gz, .tar.z, .tar.Z, .ipk
+regex/\.t([gp]?z|ar\.g?[zZ])$|\.ipk$
+	Open=%cd %p/utar://
+	View=%view{ascii} gzip -dc %f 2>/dev/null | tar tvvf -
+
+# SVG Inkscape image editor
+regex/\.(svg)
+	Open=inkscape %f > /dev/null 2>&1 &
+
+
+# HTML Image
+regex/\.(png|jpg|tif|tiff|gif|jpeg)$
+	Open=(img %f &)
+	#Open=(feh %f &)
+	#Open=(eog %f &)
+
+# lyx
+regex/\.(lyx|LYX)$
+	Open=(lyx %f > /dev/null 2>&1 &)
+	View=xed %f &
+	#View=%view{ascii} lyxcat %f
+	View=vim %s
+
+# Openoffice
+regex/\.(odg|odp|doc|odt|sxw|sxi|odp|ppt|ods|xls)
+	Open=(libreoffice %f > /dev/null 2>&1 &)
+
+# Default target for anything not described above
+default/*
+	Open=(txt "%f" 2> /dev/null  )
+	View=(vim "%f" 2> /dev/null  )
+
+

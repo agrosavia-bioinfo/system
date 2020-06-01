@@ -1,0 +1,1 @@
+xterm -fn 10x20 -bg rgb:00/02/37 -fg cyan -e vi $1 &

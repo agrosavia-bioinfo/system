@@ -1,0 +1,11 @@
+#!/bin/bash
+#gnome-sound-applet 
+#terminator -e mc &
+xmc
+pnmixer &
+#touch.sh
+nm-applet &
+#safeeyes &
+#gnome-pomodoro &
+setxkbmap us_intl &
+mate-power-manager &

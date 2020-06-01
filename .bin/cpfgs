@@ -1,0 +1,20 @@
+files=$1
+dir=$2
+user=$3
+
+if [ "$3" == '' ]; then
+	user=lg
+fi
+if [ "$2" == '' ]; then
+	dir=/tmp
+fi
+
+
+cmd="ssh -l lg lg /home/lg/.bin/cpfgs2 $files $dir"
+echo $cmd
+$cmd
+
+cmd="rsync -av $user@lg:/tmp/$files ."
+echo $cmd
+$cmd
+

@@ -1,0 +1,3 @@
+cmm="rsync -av $1 lg@lg:/tmp"
+echo $cmm
+eval $cmm

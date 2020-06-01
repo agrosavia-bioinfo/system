@@ -1,0 +1,2 @@
+DVDNAME=$1
+dd if=/dev/dvd of=$DVDNAME bs=2048

@@ -1,0 +1,10 @@
+#xinput list
+
+#xinput list-props "ETPS/2 Elantech Touchpad"|grep -i finger  ---> For Asus
+#xinput list-props "AlpsPS/2 ALPS GlidePoint"|grep -i finger  ---> For Dell
+
+#xinput set-prop "ETPS/2 Elantech Touchpad" "Synaptics Finger" 25 25 256
+#xinput set-prop "ETPS/2 Elantech Touchpad" "Synaptics Finger" 30 50 2000
+xinput set-prop 11 "Synaptics Tap Time" 180
+xinput set-prop 11 "Synaptics Two-Finger Scrolling" 1 1
+xinput set-prop 11 "Synaptics Area" 317 2623 175 1225

@@ -1,0 +1,6 @@
+# Compress the input directory name with tar -zxvf 
+parent=`basename $PWD`
+echo $parent
+date=`date "+%b%d"`
+name=$parent-$1-$date
+tar -zcvf $name.tgz $1

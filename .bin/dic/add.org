@@ -1,0 +1,3 @@
+cat ~/.shells/JDic/words.txt > ~/.shells/JDic/b
+echo $1 > ~/.shells/JDic/words.txt
+cat ~/.shells/JDic/b >> ~/.shells/JDic/words.txt

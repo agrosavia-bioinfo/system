@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# finds the device named $DNAME, then
+# disables it.
+#
+
+DNAME="Synaptics"
+DEVCMM="xinput --list | grep $DNAME|cut -d= -f2|cut -c1,2"
+echo $DEVCMM
+DEV=`xinput --list | grep "$DNAME"|cut -d= -f2|cut -c1,2`
+echo $DEV
+STATE=`xinput --list-props $DEV|grep "Device Enable"|cut -d')' -f2|cut -c3`
+echo $STATE
+if [ "$STATE" == "1" ]; then
+	echo "Enable.."
+	STATE=0
+else
+	echo "Disabling.."
+	STATE=1
+fi
+cmm='xinput -set-prop $DEV "Device Enabled" $STATE'
+echo $cmm
+eval $cmm
+
+#xdotool windowactivate --sync 31457316 key "Escape"

@@ -1,0 +1,3 @@
+vi /DATA/cloud/lgdocs/Dropbox/keys/keyslg-latest.txt
+gvim &
+killall -SIGHUP icewm

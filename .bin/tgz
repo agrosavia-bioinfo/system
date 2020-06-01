@@ -1,0 +1,10 @@
+# Compress a dir (or file) using only one parameter: the dir name
+#
+file=$1
+if [[ $file == *.tgz ]]; then
+	echo "Decompressing $1..."
+	tar -zxvf $1
+else
+	echo "Compressing $1..."
+	tar -zcvf $1.tgz $1
+fi

@@ -1,0 +1,37 @@
+#!/usr/bin/python
+
+"""
+  Secure delete (copy to TRASH dir a compressed file)
+  Aug22: Added compression and confirmation
+"""
+
+import os, sys, time
+
+TRASH="/TRASH"
+CONFIRMATION = "N"
+
+file = sys.argv[1]
+if len (sys.argv) > 2:
+	CONFIRMATION = sys.argv [2]
+
+
+dir = os.listdir(TRASH)
+
+date = str(time.localtime()[0]) + str(time.localtime()[1]).zfill(2) + str(time.localtime()[2]).zfill(2)
+time = str(time.localtime()[3]).zfill(2) + str(time.localtime()[4]).zfill(2)
+tgzFilename = "%s-%s%s.tgz" % (file, date, time)
+
+cmm1 = "tar -zcvf %s %s" % (tgzFilename, file)
+os.system (cmm1)
+
+cmm2 = "mv %s %s" % (tgzFilename, TRASH)
+os.system (cmm2)
+
+
+if CONFIRMATION == "Y":
+	if raw_input("Remove %s? (Y/N)" % file).upper() == "Y":
+		os.system ("rm -rf %s" % file)
+else:
+	os.system ("rm -rf %s" % file)
+
+

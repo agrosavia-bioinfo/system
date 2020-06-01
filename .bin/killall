@@ -1,0 +1,38 @@
+#!/usr/bin/python
+# Shows a list of processing (accordint to an input pattern) and
+# propmts if they'll be killle
+
+import sys, os
+args = sys.argv
+
+patter = ""
+option = ""
+
+if len (args) == 3:
+	option = args[2]
+
+cpid = os.getpid()
+
+cmm2 = "pslg " + sys.argv [1] + " > /tmp/b"
+os.system (cmm2)
+
+for process in open("/tmp/b"):
+	pid = int (process.split()[1])
+	if pid < cpid:
+		print ">>>",  process.strip()
+
+if option == "-auto":
+	response = "y"
+else:
+	response = raw_input ("kill all of them ?")
+
+if response != "y":
+	sys.exit (0)
+
+for process in open("/tmp/b"):
+	pid = int (process.split()[1])
+	if pid < cpid:
+		cmd = "sudo kill -9 " + str(pid)
+		print cmd
+		os.system (cmd)
+

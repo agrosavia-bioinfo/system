@@ -1,0 +1,3 @@
+sudo iwconfig wlp2s0 mode Managed
+sudo iwconfig wlp2s0 key restricted 0b3l15c0.2016
+sudo iwconfig wlp2s0 essid BiblioCentenario

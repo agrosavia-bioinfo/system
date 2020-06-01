@@ -1,0 +1,11 @@
+#------ Remap keyboard keys ------------------                                                      
+# Remap Caps Lock key to Tab Key
+# xmodmap -e "remove lock = Caps_Lock" 
+# xmodmap -e "keycode 66 = Tab" 
+# Remap F1 to 1 exclam key
+# xmodmap -e "keycode 49 = 1 exclam 1 exclam"
+
+ # Remap home key
+
+#xmodmap -e "add control  = Super_L" 
+xmodmap -e "keycode 135 = Left"

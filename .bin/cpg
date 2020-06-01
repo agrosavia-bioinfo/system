@@ -1,0 +1,18 @@
+files=$1
+dir=$2
+user=$3
+if [ "$#" == 0 ]; then
+  echo "cpb <Files> [dir] [user]"
+  exit
+fi
+if [ "$3" == '' ]; then
+	user=lg
+fi
+if [ "$2" == '' ]; then
+	dir=/tmp
+fi
+
+cmd="rsync -av $files $user@gebix:$dir"
+
+echo $cmd
+$cmd

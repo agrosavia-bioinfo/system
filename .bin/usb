@@ -1,0 +1,11 @@
+fdisk -l
+read USB
+
+if [ "$USB" = "" ]; then
+	DEVICE="sdd1"
+ else
+   DEVICE=$USB
+fi
+
+mkdir usb
+mount -a /dev/$DEVICE usb

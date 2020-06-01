@@ -1,0 +1,1 @@
+axel $1 &> /dev/null &

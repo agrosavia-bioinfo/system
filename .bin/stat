@@ -1,0 +1,2 @@
+# sound statistics for mp3
+sox $1 -n stat|grep Mean

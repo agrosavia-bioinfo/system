@@ -1,0 +1,364 @@
+" Temporal keys assignments
+"
+"
+"
+" Configuration file for vim
+" Directories
+
+	"set nofoldenable		 "dont fold by default
+	set foldmethod=syntax	"fold based on indent
+	"set foldmethod=syntax	 "fold based on indent
+	set foldnestmax=10		"deepest fold is 10 levels
+	"set foldlevel=0			"this is just what i use
+	set foldlevel=0			"this is just what i use
+
+	let r_syntax_folding=1
+
+"set directory^=~/.vim/tmp " Prepend ~/.vim/tmp to the list of directories used
+" Menu
+	map <c-t> :set go-=m|set go-=T
+	map <F2> :NERDTreeToggle<CR>
+	set guifont=Ubuntu\Mono\ 11
+	"set guifont=Droid\ Sans\Mono\ 11
+"No beep sount
+set noeb vb t_vb=
+
+" Scrool mouse 1 line
+  map <ScrollWheelUp> <C-Y>
+  map <ScrollWheelDown> <C-E>
+
+" Gvim GUI
+set guioptions-=m  "menu bar
+
+" Quick exit
+	"map <Esc><Esc> :q<CR>
+	map <F1><F1> :q<CR>
+	"map <F3><F3> :n!<CR>
+	map <F3> :%s/,/	/g <CR> 
+	map <F4> :set ts=10 <CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" >>>>>> Reopen in the last position <<<<<
+au BufWinLeave ?* mkview
+au BufWinEnter ?* silent loadview
+" >>>>>>
+
+set backup
+set backupdir=~/tmp/backups
+"autocmd!
+set nospell
+set splitright
+
+" --------------------------------------------------------------------
+" configure editor with tabs and nice stuff...
+" --------------------------------------------------------------------
+set autoindent 
+set noexpandtab 
+set tabstop=4 
+set shiftwidth=4
+
+" make backspaces more powerfull
+set backspace=indent,eol,start
+
+set ruler                           " show line and column number
+syntax on               " syntax highlighting
+set showcmd             " show (partial) command in status line
+syntax on
+filetype indent plugin on
+
+colo lgkoehlerdark
+"colo default
+"colo lg
+"set cindent
+" >>>>>> Indentation <<<<<
+set linebreak   " To break works smartly
+set nu
+" -----------------------------------------------------------
+"set ic         " Ignore case in the search
+set hlsearch
+
+
+" The following are commented out as they cause vim to behave a lot
+" different from regular vi. They are highly recommended though.
+"set showcmd		" Show (partial) command in status line.
+set showmatch		" Show matching brackets.
+set noignorecase		" Do case insensitive matching
+"set incsearch		" Incremental search
+"set autowrite		" Automatically save before commands like :next and :make
+
+if filereadable("/etc/vim/vimrc.local")
+  source /etc/vim/vimrc.local
+endif
+
+function Maps()
+	"--- Nvim send current line
+	map l <leader>l <down>  
+
+	"--- Search and  Replace the word under cursor by typing \s
+	nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>
+	nnoremap <Leader>s :/<C-r><C-w>
+
+	" To remap the annoing Ctrl+s to save
+	nmap <c-s> :w!<CR>
+	imap <c-s> <Esc>:w!<CR>a
+	imap <c-s> <Esc><c-s>
+	" Open a X terminal
+	map <c-x> : !x XX <CR> <CR>
+	map <c-a> : !./run-markdown.R <CR> <CR>
+	" Change color folded lines to dark gray
+	map <c-l> : hi Folded	 ctermfg=darkgray <CR>
+	" Open a R shell with current source
+	"map <c-r> :!xR <CR>
+
+
+	" Write/Read current selection to 'b' file
+	"map b	:w!b <CR> 
+	"map bb	:r b <CR>
+
+	"insert and remove comments in visual and normal mode
+	vmap ,ic :s/^/!/g<CR>:let @/ = ""<CR>
+	map  ,ic :s/^/!/g<CR>:let @/ = ""<CR>
+	vmap ,rc :s/^!//g<CR>:let @/ = ""<CR>
+	map  ,rc :s/^!//g<CR>:let @/ = ""<CR>
+
+	" Read and write to tmp
+	map qr	:r /tmp/b<CR>
+	map qs	:w 
+	map qw	:call Wrtmp ( )<Left><Left>
+
+	" ---- To compile in latex ----"
+	"map <c-t> : call CompileTmpLatex () <CR>
+
+	" ---- Keys for exit ----
+	map <C-t> :call ToggleQuickExitKey () <CR>
+	map q	ZZ<CR>
+endfunction
+
+function ToggleQuickExitKey ()
+	map <Esc><Esc> : <Esc><Esc>
+	map <F1><F1> :q<CR>
+	map q :exit<CR>
+endfunction
+
+
+"--Spelling settings -----
+function Spelling ()
+	set spell
+	set filetype=tex
+    map <f1> ]s
+    map <f2> z= ]s
+	map <f3> zg ]s
+endfunction
+
+"--Folding settings ------
+function Folding ()
+	"set nofoldenable		 "dont fold by default
+	set foldmethod=syntax	"fold based on indent
+	"set foldmethod=syntax	 "fold based on indent
+	set foldnestmax=10		"deepest fold is 10 levels
+	"set foldlevel=0			"this is just what i use
+	set foldlevel=0			"this is just what i use
+
+	let r_syntax_folding=1
+endfunction
+
+"call Folding ()
+
+"--LATEX--------------
+function Mail ()
+	set ignorecase
+	set nonu
+	set wrap
+	map <down> gj 
+	map <up> gk
+	set expandtab	" Expands TABs to spaces
+	map q	:exit<CR>
+endfunction
+
+"--LATEX--------------
+function CompileTex (...)
+		:w
+		if a:0 == 1
+			"silent execute "!pdflatex %"
+			execute "!ltx2.py % "
+		else 
+			"silent execute "!ltx-thesis-shortcut > /dev/null &"
+		endif
+		"silent execute "!texpdf-letter.py % &> ltx.log "
+		"silent execute "!tex2pdf.py % "
+		redraw! 
+endfunction
+" Compile the complete thesis
+function CompileTmpLatexThesis (...)
+	:w
+	silent execute "!ltx thesis > /dev/null &"
+	:redraw!
+endfunction
+
+function CompileTmpLatex (...)
+	:w
+	silent execute "!ltx2.py % &> /dev/null &"
+	"silent execute "!ltx2.py % &> /dev/null & " 
+	"silent execute "!xterm -e ltx2.py % & " 
+	"silent execute "!tex2pdf-paper.py % " 
+	:redraw!
+	"silent execute "!ltx-silent.sh"
+	"silent execute "!tex2pdf.py % "
+	"silent execute "!ltx current > /dev/null &"
+	"redraw! 
+endfunction
+
+function Latex()
+		colo lgfog 	   "Clear backgrounds
+		colo lgkohdark "Dark backgrounds
+		set fileencoding=utf-8
+		set foldmethod=indent
+		set nonu
+		set tabstop=2 
+		set shiftwidth=2 "For latex short tabs
+		set wrap
+		"autocmd FileType tex setlocal linebreak
+		map <down> gj
+		map <up> gk
+		let g:Tex_DefaultTargetFormat='pdf'
+		let g:tex_flavor='latex'
+		let g:tex_fold_enabled=1
+		"map <c-p> :!ltx2.py % <CR>
+		map <c-p> :!pdflatex tmp/tmp-% <CR>
+		map <c-f> :!ltxf thesis <CR>
+		" Remove saved buffer files (mkview, loadview)
+		map <c-d> :!rm-vm-view.sh % 
+		"autocmd BufWrite *.tex :call CompileTmpLatex ()  "Save and compile a temporal pdf/tex
+		"autocmd BufWrite *.tex :call CompileTex () "Save and Compile one step all the thesis
+		"autocmd BufWrite *.tex :call CompileTmpLatexThesis ()
+endfunction
+
+function CompileBeamer (...)
+		":w
+		 "execute "!pdflatex -output-directory=aux % & "
+		"silent execute ("!ltx &> /dev/null")
+		if a:0 == 0
+			:w
+			let cmm = "!pdflatex -output-directory=aux % &>ltx.log &"
+		 	silent execute (cmm)
+			redraw! 
+		else
+		 	execute "!pdflatex -output-directory=aux %"
+		endif
+endfunction
+
+function Beamer ()
+		map! <a-p> \item 
+		map! <a-t> \textcolor{blue}{}<Left>
+		autocmd BufWrite *.tex : call CompileBeamer ()
+		map <c-p> : call CompileBeamer ("p") <CR>
+endfunction
+"call Beamer()
+
+"--FORTRAN -----------
+function Fortran ()
+		" Stop highlighting TABs
+		hi link fortranTab NONE   
+		"set expandtab	" Expands TABs to spaces
+		set tabstop=4	
+		set shiftwidth=2 " To hide var declaration
+    	set nu
+
+		map g :!clear;echo "-------- GREP------";grep -i <C-r><C-w> *.f90
+		set grepprg=grep\ -nH\ $*
+		filetype indent on
+
+		"folding setting for fortran
+		let fortran_fold=1
+		let fortran_fold_conditionals=1
+		let fortran_fold_multilinecomments=1
+endfunction
+	"------------------ Fortran -------------------------------------
+
+"To enable mouse wheel
+set mouse=a
+
+"Customize title window
+let &titlestring = expand("%:t")
+"let &titlestring = expand("%:t") . (":") . hostname()
+
+"------------------------------------------------------------------------------
+"NerdTree file managment
+"------------------------------------------------------------------------------
+	map <F2> :NERDTreeToggle<CR>
+" Write to a tmp file
+function Wrtmp(...)
+	if a:0 == 0
+		let cmd = "." . "w! /tmp/b"
+	elseif (a:0 == 1)
+		let  start = line ('.')
+		let  end   = start + a:1 - 1
+		let cmd = start . "," . end . "w! /tmp/b"
+	elseif (a:0 == 2)
+		let  start = a:1
+		let  end   = a:2
+		let cmd = start . "," . end . "w! /tmp/b"
+	else
+		let cmd = a:1 . "," . a:2 . "w! /tmp/b"
+	endif
+	execute (cmd) 
+endfunction
+
+"""""""""""""""""""""""""""""""""""""""""
+" Use TAB to complete when typing words"
+"""""""""""""""""""""""""""""""""""""""""
+function! Tab_Or_Complete()
+	if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+		return "\<C-N>"
+	else
+		return "\<Tab>"
+	endif
+endfunction
+inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+
+"""""""""""""""""""""""""""""""""""""""""
+" Splitting
+"""""""""""""""""""""""""""""""""""""""""
+" Switch from splitted buffers
+set splitbelow
+nnoremap <tab><tab> <c-w><c-w>
+nnoremap <Esc><w> <c-w><c-w>a
+" Maximize current split window
+"nmap - :res<CR>:vertical res<CR>$ 
+map <C-o> :vertical res +25<CR>
+map <C-p> :vertical res -25<CR>
+"""""""""""""""""""""""""""""""""""""""""
+" Remaps to rungeofold.py (From RUNGEOFOLD.csh)
+"""""""""""""""""""""""""""""""""""""""""
+"map <TAB> <C-[>diwi<TAB><TAB>
+"map <TAB> <Home>icommand ('''<Esc><End>a''')<Esc><Home>
+"map <S-TAB> <End>a''')<Home>
+"map <S-Q> <Home>icommand ('''<Esc>
+
+autocmd FileType tex call Latex ()
+autocmd FileType fortran call Fortran ()
+autocmd FileType mail call Mail ()
+
+call Maps()
+
+"set foldmethod=manual   "fold based on indent
+set nowrap
+"set wrap
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Change shortcuts for cut/copy/paste form my PhD thesis
+" Set vim clipboard to system clipboard
+:set clipboard+=unnamedplus
+
+":behave mswin
+":smap <Del> <C-g>"_d
+":smap <C-c> <C-g>y <Del>
+":smap <C-x> <C-g>x
+":imap <C-v> <Esc>pi
+":smap <C-v> <C-g>p
+":smap <Tab> <C-g>1> 
+":smap <S-Tab> <C-g>1<
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"call Spelling ()
+call Folding ()

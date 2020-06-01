@@ -1,0 +1,4 @@
+LANG=en_US.ISO8859-1 
+#ssh -p 2224 -X lg@bioinfo.univalle.edu.co
+#ssh -XC -c blowfish-cbc,arcfour lg@bioinfo.univalle.edu.co -p 2224
+ssh -YC -c arcfour lg@bioinfo.univalle.edu.co -p 2224

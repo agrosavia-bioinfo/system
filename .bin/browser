@@ -1,0 +1,41 @@
+#!/usr/bin/python
+import os, sys
+
+args = sys.argv
+option = args [1]
+optionFile = "/home/lg/tmp/config/browseroption"
+
+if "-" in option[0]:
+	filehandler = open (optionFile, "w")
+	filehandler.write (args[1][1:])
+	sys.exit ()
+	
+fileName = option
+
+option = ""
+if len (args) > 2:
+	option = args [2]	
+	filehandler = open (optionFile, "w")
+	filehandler.write (option)
+elif os.path.exists (optionFile):
+	option = open (optionFile).readline()
+else:
+	option = "m"
+
+cmm = ""
+if 'f' in option:
+	cmm = 'firefox "%s" 2> /dev/null &' % fileName
+elif 'd' in option:
+	cmm = 'dillo "%s" 2> /dev/null &' % fileName
+elif 'c' in option:
+	cmm = 'chromium "%s" 2> /dev/null &' % fileName
+elif "g" in option:
+	cmm = 'chrome "%s" 2> /dev/null &' % fileName
+elif 'm' in option:
+	cmm = 'midori  "%s" 2> /dev/null &' % fileName
+elif 'q' in option:
+	cmm = 'qupzilla "%s" 2> /dev/null &' % fileName
+else:
+	cmm = 'dillo "%s" 2> /dev/null &' % fileName
+
+os.system (cmm)

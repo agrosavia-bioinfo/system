@@ -1,0 +1,6 @@
+title=$1
+if [ "$1" == '' ]; then
+        echo 
+        title="XTERM"
+fi
+xterm -fn 8x16 -bg rgb:39/04/0c -fg cyan -n $title -ls &

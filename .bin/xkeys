@@ -1,0 +1,3 @@
+alias xlg="xterm -w 0 -fa UbuntuMono -fs 12 -geometry 120x18 -fn 8x16 -bg rgb:2c/05/35 -fg white -T X"
+xlg -e vim /home/lg/.icewm/keys 
+killall -SIGHUP icewm

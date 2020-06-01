@@ -1,0 +1,249 @@
+# This is an example for IceWM's hotkey definition file.
+#
+
+# ---- Temporal keys ------
+
+#key  "F1"           /home/lg/.bin/keys/key-mplayer.sh
+#key "F1"			lgTranslate.sh
+#key "Alt+v"  		wmctrl -r :ACTIVE: -e 5,-1,-1,400,300
+#key "Alt+v"  		xPoswin.sh
+#key "F1"			/home/lg/.bin/keys/key-acroread-continuos-page.sh
+#key "F1"			xbind
+key "F2"			/home/lg/.bin/keys/key-lyx-style.sh
+#key "F3"			sudo lgTranslate.sh
+
+
+key "Alt+1"			bbrun -w  # Graphic command launcher
+key "Alt+2"          xbind
+key "Alt+3"          firefox --new-window http://scholar.google.com.co/
+key "Super+s"         firefox --new-window http://scholar.google.com.co/
+
+# ---- Dicts -----------
+#key "F1"	        /home/lg/.bin/keys/key-goldendict-close.sh
+#key "Alt+g"	        /home/lg/.bin/keys/key-goldendict-close.sh
+key "Alt+g"	        goldendict
+#key "Alt+g"	        sudo lgTranslate.sh
+
+#------------- Beamer ---------------------------------------
+#key "F1"			/home/lg/.bin/keys/key-lyx-frame.sh
+#key "F2"			/home/lg/.bin/keys/key-lyx-frame-end.sh
+#key "F3"			/home/lg/.bin/keys/key-lyx-frame-ini.sh
+#key "F4"			/home/lg/.bin/keys/key-lyx-box.sh
+#key "Alt+Enter"		/home/lg/.bin/keys/key-lyx-frame-ini.sh
+#key "Shift+Enter"	/home/lg/.bin/keys/key-lyx-box.sh
+#key "Alt+l"		/home/lg/.bin/keys/key-lyx-listing.sh
+#key "Alt+v"			/home/lg/.bin/keys/key-lyx-vspace.sh
+#key "Alt+s"			/home/lg/.bin/keys/key-lyx-style.sh
+
+#key "Ctrl+Enter"	/home/lg/.bin/keys/key-lyx-frame-ini-item.sh
+#
+#------------- xbindkeys-------------------------------------
+key "Super+b"       xbind 
+key "Ctrl+Alt+x"	xed /home/lg/.xbindkeysrc.rc
+#key "Ctrl+Alt+b"	xbook
+key "Alt+b"			lgFirefox.sh
+key "Alt+3"        xbind
+
+#------------- xbindkeys-------------------------------------
+key "Ctrl+Delete"  sudo /home/lg/.bin/ssp
+key "Alt+Delete"   sudo ifconfig eno1 down
+key "Alt+Insert"   sudo ifconfig eno1 up
+#key "Alt+t"            xtranslate.sh  
+key "Alt+l"            xlyx
+
+#-------- mc ------------
+	#key "Super+e"			xed /home/lg/.mc/mc.ext.lg
+#-------- bbrun ------------
+#	key "Alt+e"			bbrun -w  # Graphic command launcher
+	key "Super+e"			bbrun -w  # Graphic command launcher
+	key "Alt+q"			bbrun -w  # Graphic command launcher
+	key "Alt+Esc"			bbrun -w  # Graphic command launcher
+	key "Ctrl+Esc"			bbrun -w  # Graphic command launcher
+#	key "Ctrl+space"			bbrun -w  # Graphic command launcher
+
+#-------- +r -------------
+#key "Ctrl+Alt+h"  falkon -e /usr/share/doc/gromacs/html/genindex.html
+
+#-------- +r ---------------
+	key "Alt+r"  xR	
+	key "Ctrl+Alt+r"	xroot.sh
+	#key "Alt+Ctrl+r"				xright
+
+#-------- +v ---------------
+#	key "Alt+v"  chrome
+
+
+#-------------- Terminals -----------------------------------
+#key Alt+t      x top
+key "Alt+t"     firefox --new-window http://translate.google.com.co/
+
+#------------- +z -------------------------------------------
+#------------- shots -----p-----------------------------------
+#key "Alt+z"			xspectacle
+key "Alt+z"			/home/lg/.bin/lgshot.sh
+#key "Alt+z"           xshot
+#key "Alt+z"           xshot
+
+#key "Super+z" 	    wmctrl -a mc
+#key "Alt+z"			wmctrl -a chapter-6-components.tex
+#key "Alt+z"        lg-linguee-gui.zen  # Open browser with linguee 
+
+#---------- xbright
+key "XF86MonBrightnessUp" xbright up
+key "Ctrl+XF86MonBrightnessUp" xbright down
+key "XF86MonBrightnessDown" xbright down
+
+
+key "Ctrl+XF86MonBrightnessUp" gvim
+
+
+key "Ctrl+Alt+l"    xlyx
+
+#key "Alt+v"			chrome
+key "Alt+c"			xtouch-enable
+#key "Alt+c"			remove-chars-clipboard.sh
+
+#key "Alt+a"	         /home/lg/.bin/keys/key-mendeley-search.sh
+
+#key "Ctrl+Alt+p"    /home/lg/.bin/lg-cpu-disable.sh
+key "Ctrl+Alt+p"          gnome-pomodoro
+key "Ctrl+Alt+p"	 xp
+
+key "Alt+d"         dillo -f -g 1500x1500 www.google.com 
+#key "Alt+d"         dillo -f -g 1500x1500 www.linguee.com 
+#key "Alt+d"         wmctrl-dillo.sh
+#key "Alt+d"         dillo -f -g 1500x1500 www.linguee.com 
+#key "Alt+d"         dl.sh www.linguee.com
+#key "Alt+n"			qupzilla
+key "Alt+w"			lg-screen-pos.py
+key "Ctrl+Alt+w"	lg-screen-pos.py 0.5
+
+
+key "Shift+Alt+d"   dl www.linguee.com
+#key "Ctrl+Alt+l"    xdl 
+# Open last pdf downloaded in ~/downloads/pdf
+
+#---- +f ------------------
+key "Super+f"            xfeh.sh
+
+#key "Ctrl+Alt+f"        lg-open-download-pdf.py
+key "Print"		lgshot.sh
+#key "Print"		ksnapshot 
+#gnome-screenshot -a -i
+
+#---- midnight-commander -----
+#key "Ctrl+Alt+m"	terminator -e "xt MC;key-mc-hotdir.sh;mc `cat /home/lg/tmp/config/curpath.cfg`"
+#key "Ctrl+Alt+m"	terminator -e "xt MC;key-mc-hotdir.sh;mc `tail -1 /home/lg/.mc/history|cut -d= -f2`"
+key "Ctrl+Alt+m"	xmc
+
+key "Alt+m"			wmctrl -a MC 
+#key "F1"			wmctrl -r mc -b toggle,shadded
+#key "Alt+m"			wmctrl -a mc
+key "Ctrl+Esc"			wmctrl -a mc
+# key "Alt+m"		xmc
+
+#key "Ctrl+Alt+t"         xtodo  # List of tasks to do
+
+key "Ctrl+Alt+q" xbright
+
+#key "F1"			/home/lg/.bin/lg-key-window.sh
+######## F2: English  ############################
+#key "F2"			/home/lg/.bin/lg-espeak.sh 
+#key "Alt+F2"		/home/lg/.bin/lg-espeak.sh -gd
+#key "F2"			/home/lg/.bin/lg-key-window-left.sh
+
+####  +s  ###### 
+#key "Super+s"			refs
+#key "Ctrl+Alt+s"	shortcuts-mc.sh
+
+######## +d ############################
+key "Ctrl+Alt+i"	xinvert-screen-colors.sh
+#key "Ctrl+Alt+i"	xed /home/lg/.bin/img
+key "Ctrl+Alt+d"    xed /home/lg/tmp/config/dropbox-home.txt
+#key "Ctrl+Alt+o"			okular /home/lg/others/books/Confidence-LG.pdf
+key "Ctrl+Alt+o"			libreoffice
+
+######## Apps  ############################
+# To focus on dillo windows
+# key "Alt+l"        wmctrl -a dillo 
+
+############################################
+
+#key "Ctrl+Alt+p"			xp  # Conflict with lyx layout hot key
+
+######## +a ############################
+#key "Ctrl+Alt+a"	gnome-pie
+#key "Ctrl+Shift+a"			wmctrl -a chapter-properties.tex
+#key "Alt+a"			xjadd   # Terminal to add words to jdic puzle
+#key "Alt+a"		chromium-browser --user-data-dir=/home/lg
+
+
+key "Alt+k"			xkeyslg
+#key "Alt+k"		/home/lg/.bin/lg-kill-cur.sh
+
+key "XF86Standby"	xtouch-enable	
+# key "Ctrl+k"		killlatex
+#key "Alt+2"        x "ex2"
+key "Alt+4"        x "ex4"
+key "Alt+5"        x "ex5"
+key "Ctrl+Alt+y"			xed /home/lg/phd/thesis/tex/adds/lgstyle.sty
+key "Alt+y"			y "X"
+key "Ctrl+Alt+Shift+v"		xvimhelp.sh
+key "Ctrl+Alt+v"			xed /home/lg/.vimrc
+key "Ctrl+Alt+1"     setxkbmap us -variant intl
+key "Ctrl+Alt+2"     setxkbmap latam
+key "Ctrl+Alt+3"     setxkbmap es
+#------------------- R Lang ------------------------------- 
+#---------------------------------------------------------- 
+key "Alt+x"			x "X"
+key "Ctrl+Alt+x"		X
+
+key "Ctrl+F1"			xtouch-enable
+key "Ctrl+Alt+g"			 gpointing-device-settings
+key "XF86AudioLowerVolume"	lg-vol.py -
+key "XF86AudioRaiseVolume"	lg-vol.py +
+#key "Ctrl+Alt+n"	vol -
+#key "Ctrl+Alt+m"	vol +
+####  Rotate Screen ##########
+# key "Alt+l"				xleft
+# key "Alt+n"				xnormal
+
+key "Ctrl+Alt+x"		xsel -o
+
+
+key "Ctrl+Alt+j"	jabref
+key "CTrl+Alt+u"	uusb  # UnMount USB memory
+key "Alt+j"			jdic   	# Puzle to learn english words
+
+key "Ctrl+Alt+k"		xkeys
+key "Ctrl+Alt+o"				libreooffice
+
+key "KP_Add"	    pactl -- set-sink-volume 0 +10%		
+key "KP_Subtract"	pactl -- set-sink-volume 0 -10%		
+key "KP_Multiply"	pactl -- set-sink-volume 0 0%		
+#key "Alt+Ctrl+KP_Multiply"	gvim
+
+# "Multimedia key" bindings for XFree86. Gather the keycodes of your
+# advanced function keys by watching the output of the xev command whilest
+# pressing those keys and map those symbols by using xmodmap.
+
+#key "XF86Standby"		killall -QUIT icewm
+
+#key "XF86AudioLowerVolume"	aumix -v -5
+#key "XF86AudioRaiseVolume"	aumix -v +5
+#key "XF86AudioMute"		aumix -v 0
+key "XF86AudioLowerVolume"	pactl -- set-sink-volume 0 -10%
+key "XF86AudioRaiseVolume"	pactl -- set-sink-volume 0 +10%
+#key "XF86AudioMute"		    pactl -- set-sink-volume 0 0%
+key "XF86AudioMute"		    gvim
+
+key "XF86AudioPlay"		cdplay play 1
+KEY "xf86AudioStop"		cdplay stop
+#key "XF86HomePage"		netscape -noraise -remote openHomepage
+#key "XF86Mail"			netscape -noraise -remote openURL(mailto:,new-window) 
+key "XF86Search"		netscape -noraise -remote openURL(http://www.google.com/)
+key "XF86HomePage"		sensible-browser
+key "XF86Mail"			mozilla-thunderbird mailto:
+key "XF86Search"		sensible-browser http://www.google.com/
+key "XF86Eject"			eject
+key "XF86Sleep"			gvim

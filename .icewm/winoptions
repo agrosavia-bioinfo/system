@@ -1,0 +1,43 @@
+# Created by IceWM Control Panel - Window Options version 3.2
+# http://icesoundmanager.sourceforge.net
+# This is an example for IceWM's window options file.
+#
+# Place your variants in ${sysconfdir}/X11/icewm or in $HOME/.icewm
+# since modifications to this file will be discarded when you
+# (re)install icewm.
+
+#userpasswd.layer: OnTop 
+#kdepasswd.layer: OnTop
+
+#This controls Wharf geometry for 1024x768
+#licq.Wharf.dBorder: 0
+#licq.Wharf.ignoreTaskBar: 1
+#licq.Wharf.ignoreQuickSwitch: 1
+#licq.Wharf.dTitleBar: 0
+#licq.Wharf.layer: AboveDock
+#licq.Wharf.allWorkspaces: 1
+#licq.Wharf.geometry: +870+790
+
+acroread.icon: AdobeReader8
+xterm-xmc.icon: xmc
+xterm-xmc2.icon: xmc2
+xterm-R.icon: xR
+xterm-P.icon: xP
+xterm-S.icon: xS
+xterm-ltx.icon: xterm-ltx
+xterm-xed.icon: xed
+mc.icon: xmc
+zathura.icon: zathura
+zathurablue.icon: zathura-blue
+xR.icon: xR-icon.png
+#xterm.icon: xmc
+bioinfo.icon: mc
+feh.icon: feh
+Falkon.icon: falkon
+feh.fclose: feh
+chromium-browser.icon: chromium-browser
+dillo.icon: dillo
+translate.icon: translate.sh
+
+xterm-xmc.dClose:0
+xterm-xmc.fClose:0

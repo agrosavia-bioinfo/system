@@ -1,0 +1,29 @@
+FILE=$1
+NAME=`echo "$FILE" | cut -d'.' -f1`
+EXTENSION=`echo "$FILE" | cut -d'.' -f2`
+
+if [ $EXTENSION = "pdf" ]; then
+	echo "Converting .pdf to .ps ..."
+	pdf2ps $FILE
+fi
+
+BORDER=40
+if [ $2 ]; then
+  BORDER=$2
+fi
+
+psbook $NAME.ps $NAME.signature.ps
+
+#psnup -l -pletter -2 -m$BORDER $NAME.signature.ps $NAME.2up.ps
+psnup  -pletter -2 -b$BORDER $NAME.signature.ps $NAME.2up.ps
+
+pstops "2:0(0in,0in)" $NAME.2up.ps > odd.ps 
+pstops "2:-1(0in,0in)" $NAME.2up.ps > even.ps
+ps2pdf odd.ps 
+ps2pdf even.ps 
+acroread even.pdf odd.pdf
+
+rm $NAME.signature.ps
+rm $NAME.2up.ps
+rm even.*
+rm odd.*

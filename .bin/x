@@ -1,0 +1,114 @@
+#!/bin/bash
+# Open a colorful xterm with random background color
+# The title can be passed as parameter or if the parameter is "bio"
+# then, a "bio" shell is exectuted to connect to the bio server
+# Author: Luis Garreta (Sep, 2009)
+############## PROMPT COLORING ####################################
+#export PS1="$COLOR[\W$COLOR\h$COLOR:\W$COLOR]\$ \e[-1m "
+COLOR="\e[\034m\]"
+COLOR1="\[\034[1;35m\]"
+export PS1="$COLOR<\h><\W>$COLOR1\$ \e[m"
+############## PROMPT COLORING ####################################
+
+TITLE=$1
+COMMAND=""
+FONT="8x16"
+FG=gray
+#FONT="7x14"
+#FONT="6x13"
+TERM="xterm"
+
+case $1 in
+	'vdc')  TITLE=`basename $2`;
+		   COMMAND="-e vd -f csv $2";;
+	'vdt')  TITLE=`basename $2`;
+		   COMMAND="-e vd -f tsv $2";;
+	'todo') export TODO="yes" ;;
+	'mc2')  DIR=`tail -1 ~/.mc/history|cut -d= -f2`;
+		   TERM="xterm-xmc2";
+		   COMMAND="-e mc $DIR"; 
+		   TITLE="MC2";;
+	'mc')  DIR=`tail -1 ~/.mc/history|cut -d= -f2`;
+		   TERM="xterm-xmc"; 
+		   COMMAND="-e mc $DIR"; 
+		   TITLE="MC";;
+	'mc2')   TERM="xterm-xmc2"; COMMAND="-e mc $2";; 
+	'terminatormc')   
+			terminator -x mc;;
+	'xroot')   TERM="xroot"; COMMAND="-e sudo -i";; 
+	'enh')  COMMAND="enh";;
+	'top')  COMMAND="htop";;
+	'ex4')  COMMAND="ex4";;
+	'ex5')  COMMAND="ex5";;
+	'bio')  COMMAND="bio";;
+	'X')  TITLE="X";;
+	'')     COMMAND="";dir=`pwd`; TITLE="X"
+esac
+
+ARRCOLOR[0]=rgb:00/02/17 	#darkblue
+ARRCOLOR[1]=rgb:0A/14/14	#darkgreen 
+ARRCOLOR[2]=rgb:39/04/0c	#darkred
+ARRCOLOR[3]=rgb:248/107/109	#darkred2
+ARRCOLOR[4]=rgb:17/17/00		#darkyellow
+ARRCOLOR[5]=rgb:13/03/2a		#darkpurple
+ARRCOLOR[6]=rgb:19/0e/00		#darkbrown
+ARRCOLOR[7]=rgb:08/28/02		#darkgreen
+ARRCOLOR[8]=rgb:2c/05/35		#darkgreen
+ARRCOLOR[9]=rgb:2d/1e/10		#darkbrown
+ARRCOLOR[10]=rgb:00/00/00		#black
+ARRCOLOR[12]=rgb:00/00/00		#black
+ARRCOLOR[13]=rgb:12/11/21 		#black purple
+ARRCOLOR[14]=rgb:07/1B/06 		#black green
+ARRCOLOR[15]=rgb:11/13/05 		#black yellow
+ARRCOLOR[16]=rgb:24/10/14
+ARRCOLOR[17]=rgb:00/28/00 		#black steel
+## Change foreground
+ARRCOLOR[18]=rgb:13/13/13 		#black steel
+ARRCOLOR[19]=rgb:07/08/13 		#black steel
+ARRCOLOR[20]=rgb:00/00/00 		#black steel
+ARRCOLOR[21]=rgb:00/00/00 		#black steel
+ARRCOLOR[22]=rgb:00/00/00 		#black steel
+ARRCOLOR[23]=rgb:00/00/00 		#black steel
+## Dark
+ARRCOLOR[24]=rgb:10/10/10 		#black steel
+ARRCOLOR[25]=rgb:1e/00/00 		#black steel
+ARRCOLOR[26]=rgb:00/0d/1a 		#black steel
+ARRCOLOR[27]=rgb:00/00/18		#black steel
+ARRCOLOR[28]=rgb:17/0d/04 		#black steel
+
+let NUMBER=$RANDOM%${#ARRCOLOR[@]}
+FG=white
+if [ $NUMBER -gt 17 ]; then
+	FG=rgb:88/99/B9    # LightSlateBlue
+fi
+
+BG=${ARRCOLOR[$NUMBER]}
+export BG
+
+if [ "$1" == 'xed' ]; then
+	EXTENSION=`echo "$2" | cut -d'.' -f2`
+	if [ "$EXTENSION" == 'tex' ]; then
+		#BG=rgb:b8/d7/ff
+		#BG=rgb:80/80/ff
+		#BG=rgb:CA/C7/ff
+		#FG=rgb:00/00/00
+		TERM="xterm-ltx"
+	fi
+	TITLE=`basename $2`
+	COMMAND="-e vim $2"
+fi
+
+FNT='UbuntuMono'
+SIZE=125x20
+#SIZE=100x15
+#SIZE=151x24
+#SIZE=1040x640
+#BG=lightblue
+#command="$TERM -geometry 84x50 -fn $FONT -bg $BG -fg cyan -name $title -title $title $COMMAND" 
+#----ligh background
+#command="$TERM -fa $FNT -fs 14 -geometry 84x24 -fn $FONT -bg $bgClear -fg $fgDark -name $title -title $title -e $COMMAND $2" 
+#command="$TERM -w 0 -fa $FNT -fs 12 -geometry $SIZE -fn $FONT -bg $BG -fg $FG -T $TITLE -n $TITLE $COMMAND " 
+command="$TERM -w 0 -fa $FNT -fs 12 -maximized -fn $FONT -bg $BG -fg $FG -T $TITLE -n $TITLE $COMMAND " 
+$command &> /tmp/logx.log & 
+#wmctrl-set.py
+

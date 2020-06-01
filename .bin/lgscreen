@@ -1,0 +1,5 @@
+# Change resolutions
+
+# xrandr-tool  resolutions VGA1   ## To show availble resolutions
+
+xrandr -s 1366x768

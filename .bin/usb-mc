@@ -1,0 +1,7 @@
+mkdir usb
+mount -a /dev/sda1 usb
+cd usb
+mc
+cd ..
+umount usb
+rmdir usb

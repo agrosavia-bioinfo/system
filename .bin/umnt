@@ -1,0 +1,6 @@
+# Umount dev on dir and remove the directory
+
+DIR=$1
+
+sudo umount $DIR
+sudo rmdir $DIR

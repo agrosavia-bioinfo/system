@@ -1,0 +1,27 @@
+#!/bin/bash
+# Config the app to open files with table format
+#
+tblpath=/home/lg/tmp/config/tbloption
+
+arg=$1
+first=`echo ${arg:0:1}`
+if [ "$first" == '-' ]; then
+	case $1 in
+		'-v')  echo "xvd " > /home/lg/tmp/config/tbloption;;
+		'-x')  echo "xed " > /home/lg/tmp/config/tbloption;;
+		'-t')  echo "vdt" > /home/lg/tmp/config/visidata.config;;
+		'-c')  echo "vdc" > /home/lg/tmp/config/visidata.config;;
+	esac
+	exit
+fi
+viewer=`cat  $tblpath`
+echo ">>>"
+echo $viewer
+echo ">>>"
+cmm="$viewer '$1'"
+echo $cmm > /tmp/a
+
+echo $cmm
+eval $cmm  
+
+

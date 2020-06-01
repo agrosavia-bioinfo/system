@@ -1,0 +1,7 @@
+#ssh -X lgarreta@enhancer
+#ssh -p 2224 -X lg@bioinfo.univalle.edu.co
+#ssh -XC -c blowfish-cbc,arcfour lg@bioinfo.univalle.edu.co -p 2224
+#ssh -YC -c arcfour lgarreta@eisc.univalle.edu.co -p 2245 
+#ssh -YC -c arcfour lg@bioinfo.univalle.edu.co -p 2224 -o ProxyCommand="corkscrew proxy.unicauca.edu.co 3128 %h %p"
+ssh -Xl lgarreta exon02
+

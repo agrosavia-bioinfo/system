@@ -1,0 +1,49 @@
+#!/usr/bin/python
+import os, sys
+
+args = sys.argv
+option = args [1]
+imgOptionFile = "/home/lg/tmp/imgoption"
+
+if "-" in option[0]:
+	imgFile = open (imgOptionFile, "w")
+	imgFile.write (args[1])
+	sys.exit ()
+	
+fileName = option
+
+option = ""
+if len (args) > 2:
+	option = args [2]	
+	imgFile = open (imgOptionFile, "w")
+	imgFile.write (option)
+elif os.path.exists (imgOptionFile):
+	option = open (imgOptionFile).readline()
+else:
+	option = "f"
+
+cmm = ""
+if 'g' in option:
+	cmm = 'gpicview "%s" 2> /dev/null &' % fileName
+elif 'p' in option:
+	cmm = 'pinta "%s" 2> /dev/null &' % fileName
+elif 'q' in option:
+	cmm = 'qiv "%s" 2> /dev/null &' % fileName
+elif 'f' in option:
+	#cmm = 'feh "%s" -g 580x200 2> /dev/null &' % fileName
+	cmm = 'feh "%s" 2> /dev/null &' % fileName
+elif "k" in option:
+	cmm = 'kolourpaint "%s" 2> /dev/null &' % fileName
+elif 'e' in option:
+	cmm = 'eog  "%s" 2> /dev/null &' % fileName
+elif 'l' in option:
+	cmm = 'lodraw  "%s" 2> /dev/null &' % fileName
+elif 'i' in option:
+	cmm = 'inkscape  "%s" 2> /dev/null &' % fileName
+else:
+	#cmm = 'feh "%s" -g 580x200 2> /dev/null &' % fileName
+	cmm = 'feh "%s" > /dev/null &' % fileName
+
+
+#print (cmm)
+os.system (cmm)

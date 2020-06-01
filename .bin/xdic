@@ -1,0 +1,1 @@
+rxvt -geometry 30x15+380+550 -fn 8x16 -bg rgb:4b/00/82 -fg cyan -ls -e d&

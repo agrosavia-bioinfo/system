@@ -1,0 +1,1 @@
+xdotool windowactivate 67108877;xdotool key space;xdotool windowminimize 67108877

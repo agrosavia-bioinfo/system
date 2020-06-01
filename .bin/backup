@@ -1,0 +1,1 @@
+rsync -avz lg lg@nilson:/home/lg/backup-lg-Feb2011

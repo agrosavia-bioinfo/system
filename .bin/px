@@ -1,0 +1,7 @@
+if [ "$1" == '' ]; then
+	pwd|xclip -sel pri
+	pwd|xclip -sel cli
+else
+	echo "$1"|xclip -sel pri
+	echo "$1"|xclip -sel cli
+fi

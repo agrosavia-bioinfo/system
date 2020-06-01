@@ -1,0 +1,7 @@
+setxkbmap es
+
+# Swap less-greater with Alt
+xmodmap -e "keycode 94 = Alt_L Meta_L Alt_L Meta_L"
+xmodmap -e "keycode 64 = less greater less greater bar brokenbar"
+
+xmodmap -e "keycode 171 = XF86MonBrightnessUp NoSymbol XF86MonBrightnessUp NoSymbol XF86MonBrightnessUp" 

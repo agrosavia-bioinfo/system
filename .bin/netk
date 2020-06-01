@@ -1,0 +1,6 @@
+sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether 00:12:F0:A2:6C:B7
+sudo ifconfig eth0 up
+sudo ifconfig|grep HWaddr
+
+sudo /etc/init.d/networking restart

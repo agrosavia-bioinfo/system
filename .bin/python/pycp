@@ -1,0 +1,23 @@
+#!/usr/bin/python
+
+#### Some utils to handle files ######
+
+from sys import argv, exit
+from shutil import copy
+
+### Copy a list of files to a directory 
+if len (argv) < 3:
+	print "Usage: <file with namefiles> <directory>",
+	exit (0)
+
+filename = argv[1]
+dirname = argv[2]
+
+files = open (filename)
+
+for i in files:
+	i = i.strip ()
+	print "Copying ",i," to ", dirname
+	copy (i, dirname)
+
+

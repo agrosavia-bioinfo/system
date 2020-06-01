@@ -1,0 +1,40 @@
+ARRSK[0]=darkfar.ini
+ARRSK[1]=dark.ini
+ARRSK[2]=default.ini
+ARRSK[3]=double-lines.ini
+ARRSK[4]=featured.ini
+ARRSK[5]=gotar.ini
+ARRSK[6]=gray-green-purple256.ini
+ARRSK[7]=gray-orange-blue256.ini
+ARRSK[8]=mc46.ini
+ARRSK[9]=modarcon16-defbg.ini
+ARRSK[10]=modarcon16-defbg-thin.ini
+ARRSK[11]=modarcon16.ini
+ARRSK[12]=modarcon16root-defbg.ini
+ARRSK[13]=modarcon16root-defbg-thin.ini
+ARRSK[14]=modarcon16root.ini
+ARRSK[15]=modarcon16root-thin.ini
+ARRSK[16]=modarcon16-thin.ini
+ARRSK[17]=modarin256-defbg.ini
+ARRSK[18]=modarin256-defbg-thin.ini
+ARRSK[19]=modarin256.ini
+ARRSK[20]=modarin256root-defbg.ini
+ARRSK[21]=modarin256root-defbg-thin.ini
+ARRSK[22]=modarin256root.ini
+ARRSK[23]=modarin256root-thin.ini
+ARRSK[24]=modarin256-thin.ini
+ARRSK[25]=nicedark.ini
+ARRSK[26]=sand256.ini
+ARRSK[27]=seasons-autumn16M.ini
+ARRSK[28]=seasons-spring16M.ini
+ARRSK[29]=seasons-summer16M.in
+ARRSK[31]=xoria256.ini
+ARRSK[32]=yadt256-defbg.ini
+ARRSK[33]=yadt256.ini
+
+let NUMBER=$RANDOM%${#ARRSK[@]}
+SKIN=${ARRSK[$NUMBER]}
+
+cmm="mc -S /usr/share/mc/skins/$SKIN"
+echo $cmm
+eval $cmm

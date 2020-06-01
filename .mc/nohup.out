@@ -1,0 +1,26 @@
+prefs: {use_dicache} is not a recognized token.
+prefs: {vw_fontname} is not a recognized token.
+prefs: {fw_fontname} is not a recognized token.
+prefs: {text_color} is not a recognized token.
+prefs: {link_color} is not a recognized token.
+prefs: {force_my_colors} is not a recognized token.
+prefs: {transient_dialogs} is not a recognized token.
+prefs: {generate_submit} is not a recognized token.
+paths: Cannot open file '/home/lg/.dillo/keysrc': No such file or directory
+paths: Using /etc/dillo/keysrc
+paths: Cannot open file '/home/lg/.dillo/domainrc': No such file or directory
+paths: Using /etc/dillo/domainrc
+Domain: Default accept.
+dillo_dns_init: Here we go! (threaded)
+Disabling cookies.
+Nav_open_url: new url='http://www.google.com'
+Dns_server [0]: www.google.com is 74.125.21.106 74.125.21.104 74.125.21.147 74.125.21.105 74.125.21.103 74.125.21.99 2607:f8b0:4002:c06::63
+Connecting to 74.125.21.106
+Nav_open_url: new url='http://www.google.com.co/?gfe_rd=cr&ei=yuSwWNihCo7GgATOr6aIBQ'
+Dns_server [0]: www.google.com.co is 74.125.21.94 2607:f8b0:4002:c06::5e
+Connecting to 74.125.21.94
+>>>> a_Nav_repush <<<<
+Nav_open_url: new url='http://www.google.com.co/?gfe_rd=cr&ei=yuSwWNihCo7GgATOr6aIBQ'
+a_Nav_expect_done: repush!
+a_Dicache_cleanup: length = 0
+Dillo: normal exit!

@@ -1,0 +1,2 @@
+LANG=en_US.ISO8859-1 xterm -geometry 100x30 -fn 6x13 -bg black -fg cyan -T EISC -ls eisc
+

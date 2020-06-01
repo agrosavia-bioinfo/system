@@ -1,0 +1,29 @@
+#!/usr/bin/python
+
+"""
+  Make a backup of the current dir or file to /BACKUP
+  Aug22: Added compression and confirmation
+"""
+
+import os, sys, time
+
+OUTDIR="/BACK"
+CONFIRMATION = "N"
+
+file = sys.argv[1]
+if len (sys.argv) > 2:
+	CONFIRMATION = sys.argv [2]
+
+
+dir = os.listdir(OUTDIR)
+
+date = str(time.localtime()[0]) + str(time.localtime()[1]).zfill(2) + str(time.localtime()[2]).zfill(2)
+time = str(time.localtime()[3]).zfill(2) + str(time.localtime()[4]).zfill(2)
+tgzFilename = "%s-%s%s.tgz" % (file, date, time)
+
+cmm1 = "tar -zcvf %s %s" % (tgzFilename, file)
+os.system (cmm1)
+
+cmm2 = "cp -r %s %s" % (tgzFilename, OUTDIR)
+os.system (cmm2)
+

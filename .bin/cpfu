@@ -1,0 +1,16 @@
+files=$1
+dir=$2
+user=$3
+
+if [ "$3" == '' ]; then
+        user=lg
+fi
+if [ "$2" == '' ]; then
+        dir=/home/lg
+fi
+
+cmd="scp -pv $user@unicauca:$dir/$files ."
+
+echo $cmd
+sudo $cmd
+

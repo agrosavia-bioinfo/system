@@ -1,0 +1,1 @@
+scp lgarreta@ucauca:/tmp/$1 .

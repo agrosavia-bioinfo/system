@@ -1,0 +1,2 @@
+xterm -fn 8x16 -bg rgb:00/02/37 -fg cyan -ls -e vim /etc/apt/sources.list 
+xterm -fn 8x16 -bg rgb:00/02/37 -fg cyan -ls -e apt update

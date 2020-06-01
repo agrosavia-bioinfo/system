@@ -1,0 +1,5 @@
+#mupdf $1 &
+#konqueror "$1" 2> /dev/null
+#okular "$1" 2> /dev/null
+acroread -openInNewWindow "$1" &
+#sudo open okular "$1" 

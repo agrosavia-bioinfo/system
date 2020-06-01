@@ -1,0 +1,2 @@
+scp -P 2222 lgarreta@eisc:tmp/$1 .
+

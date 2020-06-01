@@ -1,0 +1,4 @@
+#mv *.bbl *.blg *.out *.aux *.log *.lyx~ *.txt *.toc *.*# /trash &> /dev/null
+rm -f *.dvi *.lof *.lot *.bbl *.blg *.out *.aux *.log *.lyx~ *.txt *.toc *.*# &> /dev/null &
+rm -f *.nav *.snm &> /dev/null &
+

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#zenity   --title  "Select  Host" --entry --text "Select the host" --entry-text `xclip -o`| xargs lng &
+lng `xclip -o`
